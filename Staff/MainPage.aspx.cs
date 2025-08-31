@@ -2,9 +2,9 @@
 using System.Web;
 using System.Web.UI;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class WillemHomePage : Page
+    public partial class MainPage : Page
     {
         
 
@@ -35,7 +35,7 @@ namespace Staff
             user["Selection"] = CUSTOMER;
             Response.Cookies.Add(user);
             user.Expires = DateTime.Now.AddMinutes(15);
-            Response.Redirect("TshidiHomePage.aspx");
+            Response.Redirect("VisitorWelcome.aspx");
         }
     }
 }

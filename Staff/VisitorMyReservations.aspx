@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyReservations.aspx.cs" Inherits="Staff.MyReservations" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorMyReservations.aspx.cs" Inherits="BlueRiverZoo.VisitorMyReservations" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -49,8 +49,8 @@
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" onclick="closeMenu()">✖ Close</a>
         <a href="VisitorHome.aspx">🏠 Home</a>
-        <a href="Reservations.aspx">🎟️ Book Tickets</a>
-        <a href="MyReservations.aspx">📋 My Reservations</a>
+        <a href="VisitorReservations.aspx">🎟️ Book Tickets</a>
+        <a href="VisitorMyReservations.aspx">📋 My Reservations</a>
         
         <asp:LinkButton ID="btnLogout" runat="server" Text="🚪 Logout" OnClick="btnLogout_Click" />
     </div>

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class VisitorWelcome : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -11,17 +11,17 @@ namespace Staff
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            Response.Redirect("VisitorLogin.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("SignUp.aspx");
+            Response.Redirect("VisitorSignUp.aspx");
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("WillemHomePage.aspx"); // ✅ back button
+            Response.Redirect("MainPage.aspx"); 
         }
     }
 }

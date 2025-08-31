@@ -4,14 +4,14 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web.UI;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class CustomerLogin : System.Web.UI.Page
+    public partial class VisitorLogin : System.Web.UI.Page
     {
         
         string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
-        // Hashing method for password
+        
         public string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -19,7 +19,7 @@ namespace Staff
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
                 StringBuilder sb = new StringBuilder();
                 foreach (byte b in bytes)
-                    sb.Append(b.ToString("x2")); // hex string
+                    sb.Append(b.ToString("x2")); 
                 return sb.ToString();
             }
         }
@@ -48,7 +48,7 @@ namespace Staff
                         Session["VisitorName"] = reader["Name"].ToString();
                         Session["VisitorEmail"] = email;
 
-                        Response.Redirect("VisitorHome.aspx");
+                        Response.Redirect("VisitorDashboard.aspx");
                     }
                     else
                     {

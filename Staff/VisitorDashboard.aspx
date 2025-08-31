@@ -1,8 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorHome.aspx.cs" Inherits="Staff.VisitorHome" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorDashboard.aspx.cs" Inherits="BlueRiverZoo.VisitorDashboard" %>
+
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Home</title>
+    <title>Dashboard</title>
     <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <style>
@@ -77,9 +79,9 @@
 
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" onclick="closeMenu()">✖ Close</a>
-            <a href="VisitorHome.aspx">🏠 Home</a>
-            <a href="Reservations.aspx">🎟️ Book Tickets</a>
-            <a href="MyReservations.aspx">📋 My Reservations</a>
+            <a href="VisitorDashboard.aspx">🏠 Home</a>
+            <a href="VisitorReservations.aspx">🎟️ Book Tickets</a>
+            <a href="VisitorMyReservations.aspx">📋 My Reservations</a>
             
             <asp:LinkButton ID="btnLogout" runat="server" Text="🚪 Logout" OnClick="btnLogout_Click" />
         </div>

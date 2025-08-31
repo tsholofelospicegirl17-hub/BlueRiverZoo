@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 
-namespace YourNamespace
+namespace Staff
 {
     public partial class AddAnimal : System.Web.UI.Page
     {

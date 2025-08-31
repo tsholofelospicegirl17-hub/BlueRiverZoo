@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ResetPasswordVisitors.aspx.cs" Inherits="Staff.ResetPasswordVisitors" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorResetPassword.aspx.cs" Inherits="BlueRiverZoo.VisitorResetPassword" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -29,7 +29,7 @@
 </head>
 <body>
 <form id="form1" runat="server">
-    <div class="back-btn"><a href="ForgotPassword.aspx">← Back</a></div>
+    <div class="back-btn"><a href="VisitorForgotPassword.aspx">← Back</a></div>
 
     <div class="card">
         <h2>Reset Password</h2>
@@ -44,7 +44,7 @@
         <div class="msg"><asp:Label ID="lblMsg" runat="server" /></div>
 
         <div style="text-align:center; margin-top:10px;">
-            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="Login.aspx" Text="← Back to Login" Visible="false" style="color:#2563eb; font-weight:600; text-decoration:none;" />
+            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="VisitorLogin.aspx" Text="← Back to Login" Visible="false" style="color:#2563eb; font-weight:600; text-decoration:none;" />
         </div>
 
     </div>

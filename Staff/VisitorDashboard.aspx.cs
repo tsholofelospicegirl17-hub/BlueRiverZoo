@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class VisitorHome : System.Web.UI.Page
+    public partial class VisitorDashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +20,7 @@ namespace Staff
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Session.Clear();
-            Response.Redirect("Login.aspx");
+            Response.Redirect("VisitorWelcome.aspx");
         }
     }
 }

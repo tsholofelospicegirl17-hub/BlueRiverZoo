@@ -3,17 +3,17 @@ using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class Reservations : System.Web.UI.Page
+    public partial class VisitorReservations : System.Web.UI.Page
     {
-        // Direct connection string (replace path if needed)
+        
         string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["VisitorID"] == null)
-                Response.Redirect("CustomerLogin.aspx");
+                Response.Redirect("VisitorLogin.aspx");
 
             if (!IsPostBack)
                 lblTotal.Text = "R0";
@@ -92,7 +92,7 @@ namespace Staff
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Session.Clear();
-            Response.Redirect("CustomerLogin.aspx");
+            Response.Redirect("VisitorLogin.aspx");
         }
     }
 }

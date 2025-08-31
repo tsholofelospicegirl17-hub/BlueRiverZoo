@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgotPasswordTshidi.aspx.cs" Inherits="Staff.ForgotPasswordTshidi" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorForgotPassword.aspx.cs" Inherits="BlueRiverZoo.VisitorForgotPassword" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -19,7 +19,7 @@
 </head>
 <body>
 <form id="form1" runat="server">
-    <div class="back-btn"><a href="Login.aspx">← Back</a></div>
+    <div class="back-btn"><a href="VisitorLogin.aspx">← Back</a></div>
 
     <div class="card">
         <h2>Reset Password</h2>
@@ -30,7 +30,7 @@
         <asp:Button ID="btnChange" runat="server" Text="Change Password" CssClass="btn" OnClick="btnChange_Click" />
 
         <div class="msg"><asp:Label ID="lblMsg" runat="server" /></div>
-        <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="Login.aspx" Text="Back to Login" Visible="false" />
+        <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="VisitorLogin.aspx" Text="Back to Login" Visible="false" />
     </div>
 </form>
 </body>

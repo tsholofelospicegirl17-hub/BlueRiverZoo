@@ -4,16 +4,16 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web.UI;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class ForgotPasswordTshidi : System.Web.UI.Page
+    public partial class VisitorForgotPassword : System.Web.UI.Page
     {
         string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["ResetEmail"] == null)
-                Response.Redirect("ForgotPassword.aspx");
+                Response.Redirect("VisitorForgotPassword.aspx");
 
             lnkLogin.Visible = false;
         }

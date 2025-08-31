@@ -4,9 +4,9 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web.UI;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class CustomerSignUp : System.Web.UI.Page
+    public partial class VisitorSignUp : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,7 +16,7 @@ namespace Staff
         
         string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
-        // Password hashing
+        
         public string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -24,7 +24,7 @@ namespace Staff
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
                 StringBuilder sb = new StringBuilder();
                 foreach (byte b in bytes)
-                    sb.Append(b.ToString("x2")); // hex string
+                    sb.Append(b.ToString("x2")); 
                 return sb.ToString();
             }
         }

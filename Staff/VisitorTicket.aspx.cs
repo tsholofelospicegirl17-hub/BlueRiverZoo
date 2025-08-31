@@ -6,11 +6,11 @@ using System.Drawing;
 using System.IO;
 using System.Web.UI;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class Ticket : System.Web.UI.Page
+    public partial class VisitorTicket : System.Web.UI.Page
     {
-        // ✅ Proper connection string
+        
         private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Staff
                                           $"<b>Tickets:</b> {dr["NumTickets"]}<br/>" +
                                           $"<b>Total:</b> R{dr["TotalCost"]}";
 
-                        // ✅ Generate QR Code
+                        // Generate QR Code for ticket
                         string qrText = $"Blue River Zoo - Reservation #{dr["ReservationID"]}";
                         QRCodeGenerator qrGen = new QRCodeGenerator();
                         QRCodeData qrData = qrGen.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
@@ -55,7 +55,7 @@ namespace Staff
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MyReservations.aspx");
+            Response.Redirect("VisitorMyReservations.aspx");
         }
     }
 }
