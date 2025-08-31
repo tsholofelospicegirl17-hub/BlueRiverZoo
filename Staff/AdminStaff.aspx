@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffAdmin.aspx.cs" Inherits="Staff.StaffAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminStaff.aspx.cs" Inherits="BlueRiverZoo.AdminStaff" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -46,30 +46,30 @@
             <h1>Staff Management</h1>
             <p>View and manage zoo staff members</p>
         </header>
-        <!-- ✅ Updated Home link -->
+        
         <nav>
-            <a href="WillemHomePage.aspx">Home</a>
+            <a href="AdminHomePage.aspx">Home</a>
             <a href="AdminMain.aspx">Dashboard</a>
-            <a href="AlertsAdmin.aspx">Alerts</a>
-            <a href="AnimalsAdmin.aspx">Animals</a>
-            <a href="ReportsAdmin.aspx">Reports</a>
+            <a href="AdminAlerts.aspx">Alerts</a>
+            <a href="AdminAnimals.aspx">Animals</a>
+            <a href="AdminReports.aspx">Reports</a>
         </nav>
 
         <div class="content">
             <div class="auto-style3">
-                <button type="button" class="btn" onclick="window.location.href='AddStaff.aspx'">
+                <button type="button" class="btn" onclick="window.location.href='AdminAddStaff.aspx'">
                     <div class="auto-style1">
                         ➕ Add New Staff
                     </div>
                 </button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="button" class="btn" onclick="window.location.href='UpdateStaff.aspx'">
+                <button type="button" class="btn" onclick="window.location.href='AdminUpdateStaff.aspx'">
                     <div class="auto-style2">
                         ➕ Update Staff Info
                     </div>
                 </button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="button" class="btn" onclick="window.location.href='RemoveStaff.aspx'">
+                <button type="button" class="btn" onclick="window.location.href='AdminRemoveStaff.aspx'">
                     <div class="auto-style1">
                         ➕ Delete Staff
                     </div>

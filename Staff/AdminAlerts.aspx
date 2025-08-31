@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AlertsAdmin.aspx.cs" Inherits="Staff.AlertsAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAlerts.aspx.cs" Inherits="BlueRiverZoo.AdminAlerts" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -41,11 +41,11 @@
         <header><h1>Zoo Alerts & Notifications</h1></header>
 
         <nav class="auto-style1">
-            <a href="WillemHomePage.aspx">Home</a>
+            <a href="AdminHomePage.aspx">Home</a>
             <a href="AdminMain.aspx">Dashboard</a>
-            <a href="AddStaff.aspx">Staff</a>
-            <a href="AnimalsAdmin.aspx">Animals</a>
-            <a href="ReportsAdmin.aspx">Reports</a>
+            <a href="AdminAddStaff.aspx">Staff</a>
+            <a href="AdminAnimals.aspx">Animals</a>
+            <a href="AdminReports.aspx">Reports</a>
         </nav>
 
         <div class="alerts">

@@ -32,7 +32,7 @@
         </header>
 
         <nav class="auto-style1">
-            <a href="Contact.aspx">Contact</a>
+            <a href="MainContact.aspx">Contact</a>
         </nav>
 
         <div class="content">

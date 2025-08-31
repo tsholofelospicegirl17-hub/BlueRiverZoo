@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="Staff.HomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminHomePage.aspx.cs" Inherits="BlueRiverZoo.AdminHomePage" %>
 
 <!DOCTYPE html>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="Staff.Contact" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainContact.aspx.cs" Inherits="Staff.Contact" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

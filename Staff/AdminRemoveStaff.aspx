@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RemoveStaff.aspx.cs" Inherits="Staff.RemoveStaff" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminRemoveStaff.aspx.cs" Inherits="BlueRiverZoo.AdminRemoveStaff" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,10 +35,10 @@
 
         
         <nav class="auto-style1">
-            <a href="WillemHomePage.aspx">Home</a>
-            <a href="StaffAdmin.aspx">Dashboard</a>
-            <a href="AddStaff.aspx">Add Staff</a>
-            <a href="UpdateStaff.aspx">Update Staff</a>
+            <a href="AdminHomePage.aspx">Home</a>
+            <a href="AdminStaff.aspx">Dashboard</a>
+            <a href="AdminAddStaff.aspx">Add Staff</a>
+            <a href="AdminUpdateStaff.aspx">Update Staff</a>
         </nav>
 
         

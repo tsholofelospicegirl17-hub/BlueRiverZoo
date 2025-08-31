@@ -2,9 +2,9 @@
 using System.Data.SqlClient;
 using System.Web.UI;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class RemoveStaff : System.Web.UI.Page
+    public partial class AdminRemoveStaff : System.Web.UI.Page
     {
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
@@ -16,7 +16,7 @@ namespace Staff
             }
         }
 
-        // Load all staff into GridView
+        
         private void LoadStaff()
         {
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -29,7 +29,7 @@ namespace Staff
             }
         }
 
-        // Delete staff by Email
+        //Delete staff by Email
         protected void btnDeleteByEmail_Click(object sender, EventArgs e)
         {
             lblMessage.Text = "";
@@ -63,7 +63,7 @@ namespace Staff
                 }
             }
 
-            // Refresh GridView
+            //Refresh the GridView
             LoadStaff();
             txtEmail.Text = "";
         }

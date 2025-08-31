@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AnimalsAdmin.aspx.cs" Inherits="Staff.AnimalsAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAnimals.aspx.cs" Inherits="BlueRiverZoo.AdminAnimals" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,13 +28,13 @@
 <body>
     <form id="form1" runat="server">
         <header><h1>Animal Records</h1></header>
-        <!-- ✅ Updated Home link -->
+        
         <nav class="auto-style1">
-            <a href="WillemHomePage.aspx">Home</a>
+            <a href="AdminHomePage.aspx">Home</a>
             <a href="AdminMain.aspx">Dashboard</a>
-            <a href="AddStaff.aspx">Staff</a>
-            <a href="BreedingPrograms.aspx">Breeding Programs</a>
-            <a href="AlertsAdmin.aspx">Alerts</a>
+            <a href="AdminAddStaff.aspx">Staff</a>
+            <a href="AdminBreedingPrograms.aspx">Breeding Programs</a>
+            <a href="AdminAlerts.aspx">Alerts</a>
         </nav>
         <div class="content">
             <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">

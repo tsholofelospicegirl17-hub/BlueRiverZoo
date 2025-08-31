@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class AlertsAdmin : System.Web.UI.Page
+    public partial class AdminAlerts : System.Web.UI.Page
     {
-        // Simple class to hold alert data
+        
         public class Alert
         {
             public string Type { get; set; }
@@ -27,7 +27,7 @@ namespace Staff
 
             if (string.IsNullOrEmpty(type) || string.IsNullOrEmpty(description))
             {
-                // Optionally display an error message (e.g., use a Label)
+                
                 return;
             }
 
@@ -35,11 +35,11 @@ namespace Staff
             alerts.Add(new Alert { Type = type, Description = description });
             Session["Alerts"] = alerts;
 
-            // Clear form
+            
             ddlAlertType.SelectedIndex = 0;
             txtDescription.Text = "";
 
-            // Rebind updated alerts list
+            
             BindAlerts();
         }
 

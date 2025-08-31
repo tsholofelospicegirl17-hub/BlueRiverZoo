@@ -2,11 +2,11 @@
 using System.Data;
 using System.Web.UI.WebControls;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class BreedingPrograms : System.Web.UI.Page
+    public partial class AdminBreedingPrograms : System.Web.UI.Page
     {
-        // Temporary in-memory data (in a real project, bind from a database)
+        
         private static DataTable breedingTable;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace Staff
                 breedingTable.Columns.Add("Gender", typeof(string));
                 breedingTable.Columns.Add("HasBred", typeof(bool));
 
-                // Dummy data
+                
                 breedingTable.Rows.Add(1, "Leo", "Lion", "Male", true);
                 breedingTable.Rows.Add(2, "Maya", "Elephant", "Female", false);
                 breedingTable.Rows.Add(3, "Kiki", "Giraffe", "Female", true);

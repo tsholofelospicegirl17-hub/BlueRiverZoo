@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Staff
+namespace BlueRiverZoo
 {
 
 
-    public partial class RemoveStaff
+    public partial class AdminHomePage
     {
 
         /// <summary>
@@ -24,48 +24,39 @@ namespace Staff
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lblMessage control.
+        /// btnMaintainAnimal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Button btnMaintainAnimal;
 
         /// <summary>
-        /// lblEnterEmail control.
+        /// btnMaintainFeedWelfare control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEnterEmail;
+        protected global::System.Web.UI.WebControls.Button btnMaintainFeedWelfare;
 
         /// <summary>
-        /// txtEmail control.
+        /// btnviewReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.Button btnviewReport;
 
         /// <summary>
-        /// btnDeleteByEmail control.
+        /// btnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDeleteByEmail;
-
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }

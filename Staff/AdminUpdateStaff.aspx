@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdateStaff.aspx.cs" Inherits="Staff.UpdateStaff" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminUpdateStaff.aspx.cs" Inherits="BlueRiverZoo.AdminUpdateStaff" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -38,15 +38,15 @@
             <p>Select a column and update its value</p>
         </header>
         <nav class="auto-style1">
-            <a href="HomePage.aspx">Home</a>
+            <a href="AdminHomePage.aspx">Home</a>
             <a href="AdminMain.aspx">Dashboard</a>
-            <a href="StaffAdmin.aspx">Manage Staff</a>
-            <a href="AddStaff.aspx">Add Staff</a>
-            <a href="RemoveStaff.aspx">Remove Staff</a>
+            <a href="AdminStaff.aspx">Manage Staff</a>
+            <a href="AdminAddStaff.aspx">Add Staff</a>
+            <a href="AdminRemoveStaff.aspx">Remove Staff</a>
         </nav>
 
         <div class="content">
-            <!-- Dropdown for Column Names -->
+            
             <label for="ddlColumn">Select Field</label>
             <asp:DropDownList ID="ddlColumn" runat="server" CssClass="input">
                 <asp:ListItem Value="--Select Column--"></asp:ListItem>
@@ -58,19 +58,18 @@
                 <asp:ListItem Value="Role"></asp:ListItem>
             </asp:DropDownList>
 
-            <!-- Old Value -->
             <label for="txtOldValue">Current Entry&nbsp;&nbsp;
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtOldValue" CssClass="newStyle1" ErrorMessage="Please enter the entry to change"></asp:RequiredFieldValidator>
             </label>
 &nbsp;<asp:TextBox ID="txtOldValue" runat="server" CssClass="input"></asp:TextBox>
 
-            <!-- New Value -->
+            
             <label for="txtNewValue">New Entry&nbsp;&nbsp;
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNewValue" CssClass="newStyle2" ErrorMessage="Please enter the new entry"></asp:RequiredFieldValidator>
             </label>
 &nbsp;<asp:TextBox ID="txtNewValue" runat="server" CssClass="input"></asp:TextBox>
 
-            <!-- Update Button -->
+            
             <asp:Button ID="btnUpdate" runat="server" Text="Update Staff" CssClass="btn" OnClick="btnUpdate_Click" />
 
             <br /><br />

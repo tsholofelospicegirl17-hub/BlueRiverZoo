@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Web.UI;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class HomePage : System.Web.UI.Page
+    public partial class AdminHomePage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -12,13 +12,13 @@ namespace Staff
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            // Maintain Animals
+            
             Response.Redirect("MaintainAnimals.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            // Maintain Feeding & Welfare
+            
             Response.Redirect("MaintainFeeding.aspx");
         }
 
@@ -29,8 +29,8 @@ namespace Staff
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            // Redirect to WillemHomePage
-            Response.Redirect("WillemHomePage.aspx");
+            
+            Response.Redirect("AdminHomePage.aspx");
         }
 
         protected void btnVisitors_Click(object sender, EventArgs e)

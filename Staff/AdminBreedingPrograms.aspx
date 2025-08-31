@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BreedingPrograms.aspx.cs" Inherits="Staff.BreedingPrograms" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminBreedingPrograms.aspx.cs" Inherits="BlueRiverZoo.AdminBreedingPrograms" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,11 +28,11 @@
             <h1>Breeding Programs</h1>
         </header>
         <nav class="auto-style1">
-            <a href="HomePage.aspx">Home</a>
-            <a href="StaffAdmin.aspx">Staff</a>
-            <a href="AnimalsAdmin.aspx">Animals</a>
-            <a href="AlertsAdmin.aspx">Alerts</a>
-            <a href="ReportsAdmin.aspx">Reports</a>
+            <a href="AdminHomePage.aspx">Home</a>
+            <a href="AdminStaff.aspx">Staff</a>
+            <a href="AdminAnimals.aspx">Animals</a>
+            <a href="AdminAlerts.aspx">Alerts</a>
+            <a href="AdminReports.aspx">Reports</a>
         </nav>
 
         <div class="content">

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Staff
+namespace BlueRiverZoo
 {
     public partial class AdminMain : System.Web.UI.Page
     {
@@ -21,22 +21,22 @@ namespace Staff
 
         protected void btnStaff_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StaffAdmin.aspx");
+            Response.Redirect("AdminStaff.aspx");
         }
 
         protected void btnAlerts_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AlertsAdmin.aspx");
+            Response.Redirect("AdminAlerts.aspx");
         }
 
         protected void btnReports_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ReportsAdmin.aspx");
+            Response.Redirect("AdminReports.aspx");
         }
 
         protected void btnAnimals_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AnimalsAdmin.aspx");
+            Response.Redirect("AdminAnimals.aspx");
         }
     }
 }

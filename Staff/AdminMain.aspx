@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminMain.aspx.cs" Inherits="Staff.AdminMain" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminMain.aspx.cs" Inherits="BlueRiverZoo.AdminMain" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,9 +34,9 @@
             <p>Manage zoo operations with ease</p>
         </header>
         <nav class="auto-style2">
-            <a href="WillemHomePage.aspx">Home</a> 
+            <a href="AdminHomePage.aspx">Home</a> 
             <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            &nbsp;<a href="ReportsAdmin.aspx">Reports</a> 
+            &nbsp;<a href="AdminReports.aspx">Reports</a> 
             <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; </span>
         </nav>
 
@@ -44,17 +44,17 @@
             <div class="card">
                 <h2>Animals</h2>
                 <p>Manage and track animal records.</p>
-                <button type="button" class="btn" onclick="window.location.href='AnimalsAdmin.aspx'">Go</button>
+                <button type="button" class="btn" onclick="window.location.href='AdminAnimals.aspx'">Go</button>
             </div>
             <div class="card">
                 <h2>Staff</h2>
                 <p>Add or manage zoo staff members.</p>
-                <button type="button" class="btn" onclick="window.location.href='StaffAdmin.aspx'">Go</button>
+                <button type="button" class="btn" onclick="window.location.href='AdminStaff.aspx'">Go</button>
             </div>
             <div class="card">
                 <h2>Alerts</h2>
                 <p>Monitor alerts and notifications.</p>
-                <button type="button" class="btn" onclick="window.location.href='AlertsAdmin.aspx'">Go</button>
+                <button type="button" class="btn" onclick="window.location.href='AdminAlerts.aspx'">Go</button>
             </div>
         </div>
     </form>

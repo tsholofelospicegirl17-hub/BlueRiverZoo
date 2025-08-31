@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddStaff.aspx.cs" Inherits="Staff.AddStaff" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAddStaff.aspx.cs" Inherits="BlueRiverZoo.AdminAddStaff" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -57,11 +57,11 @@
     <form id="form1" runat="server">
         <header><h1>Add New Staff Member</h1></header>
         <nav class="auto-style1">
-            <a href="HomePage.aspx">Home</a>
+            <a href="AdminHomePage.aspx">Home</a>
             <a href="AdminMain.aspx">Dashboard</a>
-            <a href="StaffAdmin.aspx">Manage Staff</a>
-            <a href="UpdateStaff.aspx">Update Staff</a>
-            <a href="RemoveStaff.aspx">Remove Staff</a>
+            <a href="AdminStaff.aspx">Manage Staff</a>
+            <a href="AdminUpdateStaff.aspx">Update Staff</a>
+            <a href="AdminRemoveStaff.aspx">Remove Staff</a>
         </nav>
         
         <div class="form-container">

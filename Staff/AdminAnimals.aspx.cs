@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class AnimalsAdmin : System.Web.UI.Page
+    public partial class AdminAnimals : System.Web.UI.Page
     {
-        // Corrected connection string (single backslashes)
+        
         private string connectionString =
             @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 

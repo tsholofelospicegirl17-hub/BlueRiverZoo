@@ -4,14 +4,14 @@ using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class UpdateStaff : System.Web.UI.Page
+    public partial class AdminUpdateStaff : System.Web.UI.Page
     {
-        // ✔️ Update with correct path to your database file
+        
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
-        // Safe list of allowed columns to prevent SQL injection
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +20,7 @@ namespace Staff
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StaffAdmin.aspx");
+            Response.Redirect("AdminStaff.aspx");
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
