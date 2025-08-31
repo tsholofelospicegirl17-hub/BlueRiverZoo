@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="Staff.LoginPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffLoginPage.aspx.cs" Inherits="BlueRiverZoo.StaffLoginPage" %>
 
 <!DOCTYPE html>
 
@@ -35,7 +35,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+            background-color: rgba(0, 0, 0, 0.5); 
             z-index: 0;
         }
         

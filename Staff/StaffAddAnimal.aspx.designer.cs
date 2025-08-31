@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Staff
+namespace BlueRiverZoo
 {
 
 
-    public partial class AddAnimal
+    public partial class StaffAddAnimal
     {
 
         /// <summary>

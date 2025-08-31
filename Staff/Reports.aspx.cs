@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Globalization;
 
-namespace Staff
+namespace BlueRiverZoo
 {
     public partial class Reports : System.Web.UI.Page
     {
@@ -21,9 +21,7 @@ namespace Staff
             }
         }
 
-        /* =======================
-           Animals: bind / filter / sort
-           ======================= */
+       
         private void BindAnimals()
         {
             try
@@ -99,9 +97,7 @@ namespace Staff
                 ExportToExcel(dt, "AnimalReport.xls");
         }
 
-        /* =======================
-           Feedings: bind / filter / sort
-           ======================= */
+        
         private void BindFeedings()
         {
             try
@@ -191,9 +187,7 @@ namespace Staff
                 ExportToExcel(dt, "FeedingReport.xls");
         }
 
-        /* =======================
-           Helpers: sorting + export + validation
-           ======================= */
+        
         private void ToggleSort(string exprKey, string dirKey, string newExpr)
         {
             var currentExpr = ViewState[exprKey] as string;

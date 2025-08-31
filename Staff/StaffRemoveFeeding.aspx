@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RemoveFeeding.aspx.cs" Inherits="Staff.RemoveFeeding" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffRemoveFeeding.aspx.cs" Inherits="BlueRiverZoo.StaffRemoveFeeding" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

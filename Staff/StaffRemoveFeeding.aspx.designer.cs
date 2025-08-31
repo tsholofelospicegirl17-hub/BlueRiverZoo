@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace YourNamespace
+namespace BlueRiverZoo
 {
 
 
-    public partial class MaintainAnimals
+    public partial class StaffRemoveFeeding
     {
 
         /// <summary>
@@ -24,31 +24,22 @@ namespace YourNamespace
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// AddAnimalBtn control.
+        /// DDLAnimal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddAnimalBtn;
+        protected global::System.Web.UI.WebControls.DropDownList DDLAnimal;
 
         /// <summary>
-        /// RemoveAnimalBtn control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RemoveAnimalBtn;
-
-        /// <summary>
-        /// btnUpdateAnimalInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateAnimalInfo;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
 
         /// <summary>
         /// btnBack control.
@@ -58,5 +49,14 @@ namespace YourNamespace
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBack;
+
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

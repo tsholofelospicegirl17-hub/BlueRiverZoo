@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Staff
+namespace BlueRiverZoo
 {
 
 
-    public partial class UpdateFeeding
+    public partial class StaffMaintainFeeding
     {
 
         /// <summary>
@@ -24,66 +24,75 @@ namespace Staff
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// DDLAnimal control.
+        /// AddFeedingLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLAnimal;
+        protected global::System.Web.UI.WebControls.Label AddFeedingLbl;
 
         /// <summary>
-        /// ddlFeedingTime control.
+        /// AddFeedingSchedule control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFeedingTime;
+        protected global::System.Web.UI.WebControls.Button AddFeedingSchedule;
 
         /// <summary>
-        /// txtKeeper control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKeeper;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// ddlFoodItems control.
+        /// UpdateFeedingBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFoodItems;
+        protected global::System.Web.UI.WebControls.Button UpdateFeedingBtn;
 
         /// <summary>
-        /// btnUpdate control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdate;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// btnBack control.
+        /// RemoveFeeding control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBack;
+        protected global::System.Web.UI.WebControls.Button RemoveFeeding;
 
         /// <summary>
-        /// lblMessage control.
+        /// BackLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Label BackLabel;
+
+        /// <summary>
+        /// BackBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BackBtn;
     }
 }

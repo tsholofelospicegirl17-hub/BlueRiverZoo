@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="Staff.Reports" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="BlueRiverZoo.Reports" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -71,7 +71,7 @@
         <asp:Label ID="lblAnimalSummary" runat="server" CssClass="summary" />
     </div>
 
-    <!-- Report B: Feeding Schedule -->
+    
     <div class="card">
         <h2>Feeding Report</h2>
         <div class="toolbar">

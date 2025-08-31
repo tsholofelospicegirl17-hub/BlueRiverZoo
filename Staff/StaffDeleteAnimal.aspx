@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeleteAnimal.aspx.cs" Inherits="Staff.DeleteAnimal" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffDeleteAnimal.aspx.cs" Inherits="BlueRiverZoo.StaffDeleteAnimal" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -75,7 +75,7 @@
                     </Columns>
                 </asp:GridView>
 
-                <!-- Back button -->
+                
                 <div style="text-align:center; margin-top:20px;">
                     <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="command-button" OnClick="btnBack_Click" />
                 </div>

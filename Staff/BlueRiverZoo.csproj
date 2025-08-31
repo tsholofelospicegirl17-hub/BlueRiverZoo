@@ -74,8 +74,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="916270-most-beautiful-animals-wallpaper.jpg" />
-    <Content Include="AddAnimal.aspx" />
-    <Content Include="AddFeeding.aspx" />
+    <Content Include="StaffAddAnimal.aspx" />
+    <Content Include="StaffAddFeeding.aspx" />
     <Content Include="AdminAddStaff.aspx" />
     <Content Include="AdminMain.aspx" />
     <Content Include="AdminAlerts.aspx" />
@@ -93,18 +93,18 @@
     <Content Include="BRZLogo.png" />
     <Content Include="MainContact.aspx" />
     <Content Include="VisitorSignUp.aspx" />
-    <Content Include="DeleteAnimal.aspx" />
+    <Content Include="StaffDeleteAnimal.aspx" />
     <Content Include="elephant.jpg" />
     <Content Include="VisitorForgotPassword.aspx" />
     <Content Include="girraffe.jpg" />
     <Content Include="AdminHomePage.aspx" />
     <Content Include="leopard.jpg" />
     <Content Include="lion.jpg" />
-    <Content Include="LoginPage.aspx" />
-    <Content Include="MaintainFeeding.aspx" />
+    <Content Include="StaffLoginPage.aspx" />
+    <Content Include="StaffMaintainFeeding.aspx" />
     <Content Include="VisitorMyReservations.aspx" />
     <Content Include="pequins.jpg" />
-    <Content Include="RemoveFeeding.aspx" />
+    <Content Include="StaffRemoveFeeding.aspx" />
     <Content Include="AdminRemoveStaff.aspx" />
     <Content Include="Reports.aspx" />
     <Content Include="AdminReports.aspx" />
@@ -112,12 +112,12 @@
     <Content Include="VisitorResetPassword.aspx" />
     <Content Include="AdminStaff.aspx" />
     <Content Include="StaffForgotPassword.aspx" />
-    <Content Include="MaintainAnimals.aspx" />
+    <Content Include="StaffMaintainAnimals.aspx" />
     <Content Include="VisitorTicket.aspx" />
     <Content Include="tiger.jpg" />
     <Content Include="VisitorWelcome.aspx" />
-    <Content Include="UpdateAnimal.aspx" />
-    <Content Include="UpdateFeeding.aspx" />
+    <Content Include="StaffUpdateAnimal.aspx" />
+    <Content Include="StaffUpdateFeeding.aspx" />
     <Content Include="AdminUpdateStaff.aspx" />
     <Content Include="VisitorLogin.aspx" />
     <Content Include="VisitorDashboard.aspx" />
@@ -126,19 +126,19 @@
     <Content Include="zebra.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAnimal.aspx.cs">
-      <DependentUpon>AddAnimal.aspx</DependentUpon>
+    <Compile Include="StaffAddAnimal.aspx.cs">
+      <DependentUpon>StaffAddAnimal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddAnimal.aspx.designer.cs">
-      <DependentUpon>AddAnimal.aspx</DependentUpon>
+    <Compile Include="StaffAddAnimal.aspx.designer.cs">
+      <DependentUpon>StaffAddAnimal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddFeeding.aspx.cs">
-      <DependentUpon>AddFeeding.aspx</DependentUpon>
+    <Compile Include="StaffAddFeeding.aspx.cs">
+      <DependentUpon>StaffAddFeeding.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddFeeding.aspx.designer.cs">
-      <DependentUpon>AddFeeding.aspx</DependentUpon>
+    <Compile Include="StaffAddFeeding.aspx.designer.cs">
+      <DependentUpon>StaffAddFeeding.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminAddStaff.aspx.cs">
       <DependentUpon>AdminAddStaff.aspx</DependentUpon>
@@ -189,12 +189,12 @@
     <Compile Include="VisitorSignUp.aspx.designer.cs">
       <DependentUpon>VisitorSignUp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DeleteAnimal.aspx.cs">
-      <DependentUpon>DeleteAnimal.aspx</DependentUpon>
+    <Compile Include="StaffDeleteAnimal.aspx.cs">
+      <DependentUpon>StaffDeleteAnimal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DeleteAnimal.aspx.designer.cs">
-      <DependentUpon>DeleteAnimal.aspx</DependentUpon>
+    <Compile Include="StaffDeleteAnimal.aspx.designer.cs">
+      <DependentUpon>StaffDeleteAnimal.aspx</DependentUpon>
     </Compile>
     <Compile Include="VisitorForgotPassword.aspx.cs">
       <DependentUpon>VisitorForgotPassword.aspx</DependentUpon>
@@ -210,19 +210,19 @@
     <Compile Include="AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="StaffLoginPage.aspx.cs">
+      <DependentUpon>StaffLoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="StaffLoginPage.aspx.designer.cs">
+      <DependentUpon>StaffLoginPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MaintainFeeding.aspx.cs">
-      <DependentUpon>MaintainFeeding.aspx</DependentUpon>
+    <Compile Include="StaffMaintainFeeding.aspx.cs">
+      <DependentUpon>StaffMaintainFeeding.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MaintainFeeding.aspx.designer.cs">
-      <DependentUpon>MaintainFeeding.aspx</DependentUpon>
+    <Compile Include="StaffMaintainFeeding.aspx.designer.cs">
+      <DependentUpon>StaffMaintainFeeding.aspx</DependentUpon>
     </Compile>
     <Compile Include="VisitorMyReservations.aspx.cs">
       <DependentUpon>VisitorMyReservations.aspx</DependentUpon>
@@ -232,12 +232,12 @@
       <DependentUpon>VisitorMyReservations.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoveFeeding.aspx.cs">
-      <DependentUpon>RemoveFeeding.aspx</DependentUpon>
+    <Compile Include="StaffRemoveFeeding.aspx.cs">
+      <DependentUpon>StaffRemoveFeeding.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RemoveFeeding.aspx.designer.cs">
-      <DependentUpon>RemoveFeeding.aspx</DependentUpon>
+    <Compile Include="StaffRemoveFeeding.aspx.designer.cs">
+      <DependentUpon>StaffRemoveFeeding.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminRemoveStaff.aspx.cs">
       <DependentUpon>AdminRemoveStaff.aspx</DependentUpon>
@@ -288,12 +288,12 @@
     <Compile Include="StaffForgotPassword.aspx.designer.cs">
       <DependentUpon>StaffForgotPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MaintainAnimals.aspx.cs">
-      <DependentUpon>MaintainAnimals.aspx</DependentUpon>
+    <Compile Include="StaffMaintainAnimals.aspx.cs">
+      <DependentUpon>StaffMaintainAnimals.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MaintainAnimals.aspx.designer.cs">
-      <DependentUpon>MaintainAnimals.aspx</DependentUpon>
+    <Compile Include="StaffMaintainAnimals.aspx.designer.cs">
+      <DependentUpon>StaffMaintainAnimals.aspx</DependentUpon>
     </Compile>
     <Compile Include="VisitorTicket.aspx.cs">
       <DependentUpon>VisitorTicket.aspx</DependentUpon>
@@ -309,19 +309,19 @@
     <Compile Include="VisitorWelcome.aspx.designer.cs">
       <DependentUpon>VisitorWelcome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UpdateAnimal.aspx.cs">
-      <DependentUpon>UpdateAnimal.aspx</DependentUpon>
+    <Compile Include="StaffUpdateAnimal.aspx.cs">
+      <DependentUpon>StaffUpdateAnimal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UpdateAnimal.aspx.designer.cs">
-      <DependentUpon>UpdateAnimal.aspx</DependentUpon>
+    <Compile Include="StaffUpdateAnimal.aspx.designer.cs">
+      <DependentUpon>StaffUpdateAnimal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UpdateFeeding.aspx.cs">
-      <DependentUpon>UpdateFeeding.aspx</DependentUpon>
+    <Compile Include="StaffUpdateFeeding.aspx.cs">
+      <DependentUpon>StaffUpdateFeeding.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UpdateFeeding.aspx.designer.cs">
-      <DependentUpon>UpdateFeeding.aspx</DependentUpon>
+    <Compile Include="StaffUpdateFeeding.aspx.designer.cs">
+      <DependentUpon>StaffUpdateFeeding.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminUpdateStaff.aspx.cs">
       <DependentUpon>AdminUpdateStaff.aspx</DependentUpon>

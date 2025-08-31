@@ -2,9 +2,9 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class AddFeeding : System.Web.UI.Page
+    public partial class StaffAddFeeding : System.Web.UI.Page
     {
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
@@ -86,7 +86,7 @@ namespace Staff
         // NEW: Back button redirect
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MaintainFeeding.aspx");
+            Response.Redirect("StaffMaintainFeeding.aspx");
         }
     }
 }

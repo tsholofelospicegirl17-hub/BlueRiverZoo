@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data.SqlClient;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class AddAnimal : System.Web.UI.Page
+    public partial class StaffAddAnimal : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -54,19 +54,19 @@ namespace Staff
                 }
             }
 
-            // Redirect after success
-            Response.Redirect("MaintainAnimals.aspx");
+            
+            Response.Redirect("StaffMaintainAnimals.aspx");
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MaintainAnimals.aspx");
+            Response.Redirect("StaffMaintainAnimals.aspx");
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
-{
-    Response.Redirect("MaintainAnimals.aspx");
-}
+        {
+            Response.Redirect("StaffMaintainAnimals.aspx");
+        }
 
     }
 }

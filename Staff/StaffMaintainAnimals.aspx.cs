@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace YourNamespace
+namespace BlueRiverZoo
 {
-    public partial class MaintainAnimals : System.Web.UI.Page
+    public partial class StaffMaintainAnimals : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -11,23 +11,23 @@ namespace YourNamespace
         protected void AddAnimalBtn_Click(object sender, EventArgs e)
         {
             // Navigate to AddAnimal.aspx
-            Response.Redirect("AddAnimal.aspx");
+            Response.Redirect("StaffAddAnimal.aspx");
         }
 
         protected void RemoveAnimalBtn_Click(object sender, EventArgs e)
         {
             // Navigate to DeleteAnimal.aspx
-            Response.Redirect("DeleteAnimal.aspx");
+            Response.Redirect("StaffDeleteAnimal.aspx");
         }
 
         protected void btnUpdateAnimalInfo_Click(object sender, EventArgs e)
         {
             // Navigate to Update.aspx
-            Response.Redirect("UpdateAnimal.aspx");
+            Response.Redirect("StaffUpdateAnimal.aspx");
         }
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            Response.Redirect("HomePage.aspx");
+            Response.Redirect("AdminHomePage.aspx");
         }
 
     }

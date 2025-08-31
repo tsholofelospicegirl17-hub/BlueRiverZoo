@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffForgotPassword.aspx.cs" Inherits="Staff.StaffForgotPassword" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffForgotPassword.aspx.cs" Inherits="BlueRiverZoo.StaffForgotPassword" %>
 
 <!DOCTYPE html>
 
@@ -204,7 +204,7 @@
                     <asp:Button ID="ResetBtn" runat="server" OnClick="ResetBtn_Click" Text="Reset Password" CssClass="btn btn-primary" />
                 </div>
 
-                <!-- New Back to Login button -->
+                
                 <div class="form-group">
                     <asp:Button ID="btnGoToLogin" runat="server" Text="Back to Login" CssClass="btn btn-secondary" OnClick="btnGoToLogin_Click" />
                 </div>

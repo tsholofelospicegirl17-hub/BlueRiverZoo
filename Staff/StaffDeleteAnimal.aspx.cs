@@ -3,9 +3,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class DeleteAnimal : System.Web.UI.Page
+    public partial class StaffDeleteAnimal : System.Web.UI.Page
     {
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
@@ -58,7 +58,7 @@ namespace Staff
                         ShowStatus("⚠ No animal record found with the specified ID.", "error");
                 }
 
-                LoadAnimals(); // Refresh after deletion
+                LoadAnimals(); //Refresh after deletion
             }
             catch (Exception ex)
             {

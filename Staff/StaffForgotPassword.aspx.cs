@@ -3,13 +3,13 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Web.UI;
 
-namespace Staff
+namespace BlueRiverZoo
 {
     public partial class StaffForgotPassword : System.Web.UI.Page
     {
         protected void btnGoToLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("LoginPage.aspx");
+            Response.Redirect("StaffLoginPage.aspx");
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Staff
             {
                 conn.Open();
 
-                // Check if email exists
+                
                 string checkEmailQuery = "SELECT COUNT(*) FROM EmployeeTable WHERE Email = @Email";
                 using (SqlCommand checkCmd = new SqlCommand(checkEmailQuery, conn))
                 {
@@ -50,7 +50,7 @@ namespace Staff
                     }
                 }
 
-                // Update password (store as plain text)
+                
                 string updateQuery = "UPDATE EmployeeTable SET Password = @Password WHERE Email = @Email";
                 using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
                 {

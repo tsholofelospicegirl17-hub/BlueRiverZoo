@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data.SqlClient;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class UpdateAnimal : System.Web.UI.Page
+    public partial class StaffUpdateAnimal : System.Web.UI.Page
     {
         string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
@@ -97,7 +97,7 @@ namespace Staff
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MaintainAnimals.aspx");
+            Response.Redirect("StaffMaintainAnimals.aspx");
         }
     }
 }

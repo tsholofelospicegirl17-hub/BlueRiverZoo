@@ -4,16 +4,16 @@ using System.Data.SqlClient;
 using System.Web.UI;
 using System.Configuration;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class LoginPage : System.Web.UI.Page
+    public partial class StaffLoginPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e) { }
 
         protected void btnLogIn_Click(object sender, EventArgs e)
         {
-            string email = EmailTxtbx.Text.Trim();       // txtEmail = ASP:TextBox for email
-            string password = PasswordTxtbx.Text.Trim(); // txtPassword = ASP:TextBox for password
+            string email = EmailTxtbx.Text.Trim();      
+            string password = PasswordTxtbx.Text.Trim(); 
 
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
@@ -33,15 +33,15 @@ namespace Staff
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Password", password); // If you store hashed passwords, hash it here before comparing
+                    cmd.Parameters.AddWithValue("@Password", password); 
 
                     int result = (int)cmd.ExecuteScalar();
 
                     if (result > 0)
                     {
-                        // Successful login
-                        Session["UserEmail"] = email; // optional: store in session
-                        Response.Redirect("HomePage.aspx");
+                        
+                        Session["UserEmail"] = email; 
+                        Response.Redirect("AdminHomePage.aspx");
                     }
                     else
                     {
@@ -55,7 +55,7 @@ namespace Staff
 
         protected void btnForgetPass_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StaffForgotPassword.aspx"); // Redirect to a password recovery page
+            Response.Redirect("StaffForgotPassword.aspx"); 
         }
     }
 }

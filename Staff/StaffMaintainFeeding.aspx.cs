@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Staff
+namespace BlueRiverZoo
 {
-    public partial class MaintainFeeding : System.Web.UI.Page
+    public partial class StaffMaintainFeeding : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,22 +16,22 @@ namespace Staff
 
         protected void AddFeedingSchedule_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AddFeeding.aspx");
+            Response.Redirect("StaffAddFeeding.aspx");
         }
 
         protected void RemoveFeeding_Click(object sender, EventArgs e)
         {
-            Response.Redirect("RemoveFeeding.aspx");
+            Response.Redirect("StaffRemoveFeeding.aspx");
         }
 
         protected void UpdateFeedingBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("UpdateFeeding.aspx");
+            Response.Redirect("StaffUpdateFeeding.aspx");
         }
 
         protected void BackBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("HomePage.aspx");
+            Response.Redirect("AdminHomePage.aspx");
         }
     }
 }
