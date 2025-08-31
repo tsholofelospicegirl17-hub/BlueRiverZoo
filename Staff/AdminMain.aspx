@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Staff.aspx.cs" Inherits="Staff.AdminMain" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminMain.aspx.cs" Inherits="Staff.AdminMain" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -6,6 +6,7 @@
     <title>Staff Zoo - Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
+    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f4f4f4; }
         header { background: #2e7d32; color: white; padding: 20px; text-align: center; }

@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Zoo Alerts - BLUERZ</title>
+    <title>Zoo Alerts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
+    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f4f4f4; }
         header { background: #c62828; color: white; padding: 20px; text-align: center; }
