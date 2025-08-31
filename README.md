@@ -25,14 +25,14 @@ the files are **renamed to clearly show** which part belongs to which user role.
   - `VisitorResetPassword.aspx / VisitorResetPassword.aspx.cs`
   
 - **Staff**
-  - `Staff_Home.aspx / Staff_Home.aspx.cs`
-  - `Staff_ManageAnimals.aspx / Staff_ManageAnimals.aspx.cs`
-  - `Staff_ViewVisitors.aspx / Staff_ViewVisitors.aspx.cs`
+  - 
+  - 
+  - 
   
 - **Admin**
-  - `Admin_Home.aspx / Admin_Home.aspx.cs`
-  - `Admin_ManageStaff.aspx / Admin_ManageStaff.aspx.cs`
-  - `Admin_Reports.aspx / Admin_Reports.aspx.cs`
+  - 
+  - 
+  - 
 
 ---
 
