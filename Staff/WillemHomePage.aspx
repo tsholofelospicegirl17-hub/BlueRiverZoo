@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Staff Zoo System - Home</title>
+    <title>Welcome to Blue River Zoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="BRZLogo.png" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />

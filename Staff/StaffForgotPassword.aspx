@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" style="background-image: url('birds.jpg')">
 <head runat="server">
     <title>Password Reset | Blue River Zoo</title>
+    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');

@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Blue River Zoo - Staff Portal</title>
+    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style type="text/css">
         body {
             font-family: 'Segoe UI', Arial, sans-serif;

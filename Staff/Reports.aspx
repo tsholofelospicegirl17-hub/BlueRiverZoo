@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Zoo Reports</title>
+    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style>
         body { font-family: Segoe UI, Arial, sans-serif; }
         .wrap { max-width: 1100px; margin: 20px auto; }
@@ -22,7 +23,7 @@
 <form id="form1" runat="server">
 <div class="wrap">
 
-    <!-- Report A: Animal Summary -->
+    
     <div class="card">
         <h2>Animal Summary Report</h2>
         <div class="toolbar">

@@ -13,7 +13,7 @@ namespace Staff
 
         }
 
-        // Direct connection string (replace path with your actual MDF file if needed)
+        
         string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
         // Password hashing
@@ -62,7 +62,7 @@ namespace Staff
                     lblMsg.Text = "✅ Account created successfully. Please login.";
                     lblMsg.ForeColor = System.Drawing.Color.Green;
 
-                    // Clear fields
+                    
                     txtName.Text = "";
                     txtSurname.Text = "";
                     txtEmail.Text = "";
@@ -72,7 +72,7 @@ namespace Staff
                 }
                 catch (Exception ex)
                 {
-                    // Usually happens when email already exists (unique constraint)
+                    
                     lblMsg.Text = "⚠ Error: " + ex.Message;
                     lblMsg.ForeColor = System.Drawing.Color.Red;
                 }

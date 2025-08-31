@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Contact & Help Desk - BLUERZ Zoo System</title>
+    <title>Contact & Help Desk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
+    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;

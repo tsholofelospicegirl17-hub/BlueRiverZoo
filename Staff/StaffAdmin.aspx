@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Staff Management - BLUERZ Zoo</title>
+    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
     <style>

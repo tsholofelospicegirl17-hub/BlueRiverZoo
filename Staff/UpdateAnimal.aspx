@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Update Animal - Blue River Zoo</title>
+    <title>Update Animal</title>
+    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
         

@@ -8,10 +8,10 @@ namespace Staff
 {
     public partial class CustomerLogin : System.Web.UI.Page
     {
-        // Direct connection string (replace with your actual values)
+        
         string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
-        // Hashing method
+        // Hashing method for password
         public string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())

@@ -11,7 +11,7 @@ namespace Staff
 {
 
 
-    public partial class Ticket
+    public partial class Tickets
     {
 
         /// <summary>
