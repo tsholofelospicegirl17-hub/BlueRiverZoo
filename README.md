@@ -44,10 +44,12 @@ the files are **renamed to clearly show** which part belongs to which user role.
 ---
 
 ## 🗄 Database
-- SQL Server LocalDB used (`BlueRiverZooDB.mdf`).  
+- SQL Server LocalDB used (`Animals.mdf`).  
 - **Tables:**
   - `Visitors` (VisitorID, Name, Surname, Email, Phone, PasswordHash)
   - `Reservations` (ReservationID, VisitorID, TicketType, VisitDate, NumTickets, TotalCost, PaymentMethod, Status)
+ 
+  - 
 
 The `Reservations` table is a **child entity** linked to `Visitors`.
 
