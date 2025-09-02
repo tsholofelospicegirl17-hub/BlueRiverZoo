@@ -22,15 +22,17 @@
     <div class="back-btn"><a href="VisitorLogin.aspx">← Back</a></div>
 
     <div class="card">
-        <h2>Reset Password</h2>
+        <h2>Forgot Password</h2>
 
-        <asp:TextBox ID="txtNewPass" runat="server" TextMode="Password" placeholder="New Password" />
-        <asp:TextBox ID="txtConfirmPass" runat="server" TextMode="Password" placeholder="Confirm Password" />
+        <asp:TextBox ID="txtEmail" runat="server" placeholder="Enter your email" />
+        <asp:RequiredFieldValidator ID="rfvEmail" runat="server"
+            ControlToValidate="txtEmail"
+            ErrorMessage="⚠ Email is required"
+            ForeColor="Red" Display="Dynamic" />
 
-        <asp:Button ID="btnChange" runat="server" Text="Change Password" CssClass="btn" OnClick="btnChange_Click" />
+        <asp:Button ID="btnSend" runat="server" Text="Send Reset Link" CssClass="btn" OnClick="btnSend_Click" />
 
         <div class="msg"><asp:Label ID="lblMsg" runat="server" /></div>
-        <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="VisitorLogin.aspx" Text="Back to Login" Visible="false" />
     </div>
 </form>
 </body>

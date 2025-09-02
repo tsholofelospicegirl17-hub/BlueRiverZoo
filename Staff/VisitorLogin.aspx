@@ -29,10 +29,11 @@
         <h2>Login</h2>
         <label>Email</label>
         <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Enter email"/>
+        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="⚠ Email is required" ForeColor="Red" Display="Dynamic" />
 
         <label>Password</label>
         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter password"/>
-
+        <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="⚠ Password is required" ForeColor="Red" Display="Dynamic" />
         <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn" OnClick="btnLogin_Click" />
         <div class="msg"><asp:Label ID="lblMsg" runat="server" /></div>
 

@@ -30,22 +30,28 @@
         <h2>Create Account</h2>
         <label>Name</label>
         <asp:TextBox ID="txtName" runat="server" placeholder="Enter name"/>
+        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" ErrorMessage="⚠ Name is required" ForeColor="Red" Display="Dynamic" />
 
         <label>Surname</label>
         <asp:TextBox ID="txtSurname" runat="server" placeholder="Enter surname"/>
+        <asp:RequiredFieldValidator ID="rfvSurname" runat="server" ControlToValidate="txtSurname" ErrorMessage="⚠ Surname is required" ForeColor="Red" Display="Dynamic" />
 
         <label>Email</label>
         <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Enter email"/>
+        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="⚠ Email is required" ForeColor="Red" Display="Dynamic" />
 
         <label>Phone Number</label>
         <asp:TextBox ID="txtPhone" runat="server" placeholder="Enter phone number"/>
+        <asp:RequiredFieldValidator ID="rfvNumber" runat="server" ControlToValidate="txtPhone" ErrorMessage="⚠ Phone number is required" ForeColor="Red" Display="Dynamic" />
 
         <label>Password</label>
         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter password"/>
+        <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="⚠ Password is required" ForeColor="Red" Display="Dynamic" />
 
         <label>Confirm Password</label>
         <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" placeholder="Re-enter password"/>
-
+        <asp:RequiredFieldValidator ID="rfvConfirmPassword" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="⚠ Confirm your password" ForeColor="Red" Display="Dynamic" />
+        <asp:CompareValidator ID="comparePassword" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword" ErrorMessage="⚠ Passwords do not match" ForeColor="Red" Display="Dynamic" />
         <asp:Button ID="btnSignup" runat="server" Text="Sign Up" CssClass="btn" OnClick="btnSignup_Click" />
         <div class="msg"><asp:Label ID="lblMsg" runat="server" /></div>
 
