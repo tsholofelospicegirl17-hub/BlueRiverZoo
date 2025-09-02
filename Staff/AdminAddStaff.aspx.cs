@@ -6,7 +6,7 @@ using System.Web.UI;
 
 namespace BlueRiverZoo
 {
-    public partial class AddStaff : System.Web.UI.Page
+    public partial class AdminAddStaff : System.Web.UI.Page
     {
         // Replace with your actual connection string
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Animals.mdf;Integrated Security=True";
@@ -87,8 +87,8 @@ namespace BlueRiverZoo
             using (SHA256 sha256 = SHA256.Create())
             {
                 byte[] bytes = Encoding.UTF8.GetBytes(password);
-                byte[] hash = sha256.ComputeHash(bytes
-                return Convert,ToBase64String(hash)
+                byte[] hash = sha256.ComputeHash(bytes);
+                return Convert.ToBase64String(hash);
             }
         }
 
