@@ -1,14 +1,15 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web.UI;
-using System.Xml.Linq;
 
 namespace BlueRiverZoo
 {
-    public partial class AdminAddStaff : System.Web.UI.Page
+    public partial class AddStaff : System.Web.UI.Page
     {
-        
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|EmployeeTable.mdf;Integrated Security=True";
+        // Replace with your actual connection string
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Animals.mdf;Integrated Security=True";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,7 +32,7 @@ namespace BlueRiverZoo
 
         protected void btnAddStaff_Click(object sender, EventArgs e)
         {
-            
+            // Validation
             if (string.IsNullOrWhiteSpace(txtName.Text) ||
                 string.IsNullOrWhiteSpace(txtSurname.Text) ||
                 string.IsNullOrWhiteSpace(txtEmail.Text) ||
@@ -45,16 +46,19 @@ namespace BlueRiverZoo
 
             try
             {
+                // Hash the password before storing it
+                string hashedPassword = HashPassword(txtPassword.Text.Trim());
+
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "INSERT INTO StaffTable (FullName, Surname, Email, Password, Role) " +
+                    string query = "INSERT INTO EmployeeTable (Name, Surname, Email, Password, Role) " +
                                    "VALUES (@Name, @Surname, @Email, @Password, @Role)";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
                     cmd.Parameters.AddWithValue("@Surname", txtSurname.Text.Trim());
                     cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim()); 
+                    cmd.Parameters.AddWithValue("@Password", hashedPassword); // hashed password
                     cmd.Parameters.AddWithValue("@Role", ddlRole.SelectedValue);
 
                     conn.Open();
@@ -64,7 +68,7 @@ namespace BlueRiverZoo
                 lblMessage.ForeColor = System.Drawing.Color.Green;
                 lblMessage.Text = "New staff member added successfully!";
 
-                
+                // Clear fields after successful submission
                 txtName.Text = "";
                 txtSurname.Text = "";
                 txtEmail.Text = "";
@@ -75,6 +79,16 @@ namespace BlueRiverZoo
             {
                 lblMessage.ForeColor = System.Drawing.Color.Red;
                 lblMessage.Text = "Error adding staff: " + ex.Message;
+            }
+        }
+
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+                byte[] hash = sha256.ComputeHash(bytes
+                return Convert,ToBase64String(hash)
             }
         }
 
