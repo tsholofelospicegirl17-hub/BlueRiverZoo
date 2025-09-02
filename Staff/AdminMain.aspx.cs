@@ -21,7 +21,7 @@ namespace BlueRiverZoo
 
         protected void btnStaff_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminStaff.aspx");
+           // Response.Redirect("AdminStaff.aspx");
         }
 
         protected void btnAlerts_Click(object sender, EventArgs e)
