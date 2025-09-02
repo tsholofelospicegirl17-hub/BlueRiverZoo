@@ -112,8 +112,7 @@
 
             <div class="msg"><asp:Label ID="lblMsg" runat="server" /></div>
 
-            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="VisitorLogin.aspx" 
-                Text="← Back to Login" CssClass="back-link" Visible="false" />
+            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="VisitorLogin.aspx" Text="Login" CssClass="back-link" Visible="false" />
         </div>
     </form>
 </body>

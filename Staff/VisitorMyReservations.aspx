@@ -58,9 +58,7 @@
     <div class="content">
         <h2>📋 Your Bookings</h2>
 
-        <asp:GridView ID="gvReservations" runat="server" AutoGenerateColumns="False" CssClass="grid"
-            DataKeyNames="ReservationID"
-            OnRowCommand="gvReservations_RowCommand">
+        <asp:GridView ID="gvReservations" runat="server" AutoGenerateColumns="False" CssClass="grid" DataKeyNames="ReservationID" OnRowCommand="gvReservations_RowCommand">
             <Columns>
                 <asp:BoundField DataField="ReservationID" HeaderText="ID" />
                 <asp:BoundField DataField="TicketType" HeaderText="Ticket Type" />
@@ -72,8 +70,10 @@
 
                 <asp:TemplateField HeaderText="Actions">
                     <ItemTemplate>
-                        <asp:Button ID="btnTicket" runat="server" Text="View Ticket" CssClass="btn-ticket" CommandName="ViewTicket" CommandArgument='<%# Eval("ReservationID") %>' />
-                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-cancel" CommandName="CancelRes" CommandArgument='<%# Eval("ReservationID") %>' />
+                        <asp:Button ID="btnTicket" runat="server" Text="View Ticket" CssClass="btn-ticket" CommandName="ViewTicket" CommandArgument='<%# Eval("ReservationID") %>' Visible='<%# Eval("Status").ToString() != "Cancelled" %>' />
+
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-cancel" CommandName="CancelRes" CommandArgument='<%# Eval("ReservationID") %>' Visible='<%# Eval("Status").ToString() != "Cancelled" %>' />
+
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

@@ -23,14 +23,11 @@
 
     <div class="card">
         <h2>Forgot Password</h2>
-
+        <label for="txtEmail">Enter your email</label>
         <asp:TextBox ID="txtEmail" runat="server" placeholder="Enter your email" />
-        <asp:RequiredFieldValidator ID="rfvEmail" runat="server"
-            ControlToValidate="txtEmail"
-            ErrorMessage="⚠ Email is required"
-            ForeColor="Red" Display="Dynamic" />
+        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="⚠ Email is required" ForeColor="Red" Display="Dynamic" />
 
-        <asp:Button ID="btnSend" runat="server" Text="Send Reset Link" CssClass="btn" OnClick="btnSend_Click" />
+        <asp:Button ID="btnReset" runat="server" Text="Reset Password" CssClass="btn" OnClick="btnReset_Click" />
 
         <div class="msg"><asp:Label ID="lblMsg" runat="server" /></div>
     </div>

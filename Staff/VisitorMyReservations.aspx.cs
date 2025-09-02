@@ -8,14 +8,13 @@ namespace BlueRiverZoo
 {
     public partial class VisitorMyReservations : System.Web.UI.Page
     {
-        
         string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["VisitorID"] == null)
             {
-                Response.Redirect("VisitorLogin.aspx"); //redirect if not logged in
+                Response.Redirect("VisitorLogin.aspx"); 
                 return;
             }
 
@@ -59,7 +58,7 @@ namespace BlueRiverZoo
 
                 lblMsg.ForeColor = System.Drawing.Color.Green;
                 lblMsg.Text = "Reservation cancelled successfully.";
-                LoadReservations();
+                LoadReservations(); 
             }
             else if (e.CommandName == "ViewTicket")
             {

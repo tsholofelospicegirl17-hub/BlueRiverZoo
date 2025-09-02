@@ -24,6 +24,12 @@ namespace BlueRiverZoo
             string newPassword = txtNewPass.Text.Trim();
             string confirmPassword = txtConfirmPass.Text.Trim();
 
+            if (string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword))
+            {
+                lblMsg.Text = "⚠ Please fill in all fields.";
+                lblMsg.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
             if (newPassword != confirmPassword)
             {
                 lblMsg.Text = "⚠ Passwords do not match!";

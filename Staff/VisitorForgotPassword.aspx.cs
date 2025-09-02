@@ -12,52 +12,39 @@ namespace BlueRiverZoo
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["ResetEmail"] == null)
-                Response.Redirect("VisitorForgotPassword.aspx");
-
-            lnkLogin.Visible = false;
         }
 
-        protected void btnChange_Click(object sender, EventArgs e)
+        protected void btnReset_Click(object sender, EventArgs e)
         {
-            string newPassword = txtNewPass.Text.Trim();
-            string confirmPassword = txtConfirmPass.Text.Trim();
+            string email = txtEmail.Text.Trim().ToLower();
 
-            if (newPassword != confirmPassword)
+            if (string.IsNullOrEmpty(email))
             {
-                lblMsg.Text = "⚠ Passwords do not match!";
+                lblMsg.Text = "⚠ Please enter your email.";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
                 return;
             }
 
-            string hashedPassword = HashPassword(newPassword);
-
             using (SqlConnection con = new SqlConnection(connStr))
             {
                 con.Open();
-                string sql = "UPDATE Visitors SET PasswordHash=@PasswordHash WHERE Email=@Email";
+                string sql = "SELECT COUNT(*) FROM Visitors WHERE Email=@Email";
                 SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@PasswordHash", hashedPassword);
-                cmd.Parameters.AddWithValue("@Email", Session["ResetEmail"].ToString());
-                cmd.ExecuteNonQuery();
-            }
+                cmd.Parameters.AddWithValue("@Email", email);
 
-            lblMsg.Text = "✅ Password reset successful! You can now login.";
-            lblMsg.ForeColor = System.Drawing.Color.Green;
+                int exists = (int)cmd.ExecuteScalar();
 
-            lnkLogin.Visible = true;
-            Session["ResetEmail"] = null;
-        }
-
-        private string HashPassword(string password)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                StringBuilder sb = new StringBuilder();
-                foreach (byte b in bytes)
-                    sb.Append(b.ToString("x2"));
-                return sb.ToString();
+                if (exists > 0)
+                {
+                    
+                    Session["ResetEmail"] = email;
+                    Response.Redirect("VisitorResetPassword.aspx");
+                }
+                else
+                {
+                    lblMsg.Text = "⚠ This email does not exist in our records.";
+                    lblMsg.ForeColor = System.Drawing.Color.Red;
+                }
             }
         }
     }
