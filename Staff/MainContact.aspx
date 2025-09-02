@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainContact.aspx.cs" Inherits="Staff.Contact" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainContact.aspx.cs" Inherits="BlueRiverZoo.MainContact" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -81,7 +81,7 @@
         </header>
 
         <nav>
-            <a href="HomePage.aspx">Home</a>
+            <a href="MainPage.aspx">Home</a>
         </nav>
 
         <div class="content">
