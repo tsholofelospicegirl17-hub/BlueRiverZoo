@@ -30,9 +30,16 @@ the files are **renamed to clearly show** which part belongs to which user role.
   - 
   
 - **Admin**
-  - 
-  - 
-  - 
+  - `AdminAddStaff.aspx / AdmimAddStaff.aspx.cs`
+  - `AdminAlerts.aspx / AdminAlerts.aspx.cs`
+  - `AdminAnimals.aspx / AdminAnimals.aspx.cs`
+  - `AdminBreedingPrograms.aspx / AdminBreedingPrograms.aspx.cs`
+  - `AdminHomePage.aspx / AdminHomePage.aspx.cs`
+  - `AdminMain.aspx / AdminMain.aspx.cs`
+  - `AdminRemoveStaff.aspx / AdminRemoveStaff.aspx.cs`
+  - `AdminReports.aspx / AdminReports.aspx.cs`
+  - `AdminStaff.aspx / AdminStaff.aspx.cs`
+  - `AdminUpdateStaff.aspx / AdminUpdateStaff.aspx.cs`
 
 ---
 
@@ -61,9 +68,10 @@ The `Reservations` table is a **child entity** linked to `Visitors`.
 - **Staff:**
   - Manage animal records
   - View all visitor bookings
+  - Generate reports
 - **Admin:**
   - Add / Remove staff
-  - Generate reports
+  - View reports
   - Oversee system operations
  
 ---
