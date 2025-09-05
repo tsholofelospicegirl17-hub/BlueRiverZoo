@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
@@ -8,7 +8,7 @@ namespace BlueRiverZoo
 {
     public partial class AdminAnimals : System.Web.UI.Page
     {
-        
+        // Corrected connection string (single backslashes)
         private string connectionString =
             @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
