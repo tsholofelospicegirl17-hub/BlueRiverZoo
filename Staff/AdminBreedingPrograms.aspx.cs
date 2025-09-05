@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Web.UI.WebControls;
 
@@ -6,7 +6,7 @@ namespace BlueRiverZoo
 {
     public partial class AdminBreedingPrograms : System.Web.UI.Page
     {
-        
+        // Temporary in-memory data (in a real project, bind from a database)
         private static DataTable breedingTable;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace BlueRiverZoo
                 breedingTable.Columns.Add("Gender", typeof(string));
                 breedingTable.Columns.Add("HasBred", typeof(bool));
 
-                
+                // Dummy data
                 breedingTable.Rows.Add(1, "Leo", "Lion", "Male", true);
                 breedingTable.Rows.Add(2, "Maya", "Elephant", "Female", false);
                 breedingTable.Rows.Add(3, "Kiki", "Giraffe", "Female", true);
@@ -60,10 +60,11 @@ namespace BlueRiverZoo
             int animalId = Convert.ToInt32(gvBreeding.DataKeys[e.RowIndex].Value);
 
             GridViewRow row = gvBreeding.Rows[e.RowIndex];
-            string name = ((TextBox)row.Cells[1].Controls[0]).Text;
-            string species = ((TextBox)row.Cells[2].Controls[0]).Text;
-            string gender = ((TextBox)row.Cells[3].Controls[0]).Text;
-            bool hasBred = ((CheckBox)row.Cells[4].Controls[0]).Checked;
+
+            string name = ((TextBox)row.FindControl("txtName")).Text;
+            string species = ((TextBox)row.FindControl("txtSpecies")).Text;
+            string gender = ((TextBox)row.FindControl("txtGender")).Text;
+            bool hasBred = ((CheckBox)row.FindControl("chkHasBred")).Checked;
 
             // Update the DataTable
             foreach (DataRow dr in breedingTable.Rows)
@@ -80,6 +81,39 @@ namespace BlueRiverZoo
 
             gvBreeding.EditIndex = -1;
             BindGrid();
+        }
+
+        protected void gvBreeding_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvBreeding.PageIndex = e.NewPageIndex;
+            BindGrid();
+        }
+
+        protected void gvBreeding_Sorting(object sender, GridViewSortEventArgs e)
+        {
+            DataView dv = breedingTable.DefaultView;
+            string sortDirection = "ASC";
+
+            if (ViewState["SortExpression"] != null && ViewState["SortDirection"] != null)
+            {
+                if (ViewState["SortExpression"].ToString() == e.SortExpression &&
+                    ViewState["SortDirection"].ToString() == "ASC")
+                {
+                    sortDirection = "DESC";
+                }
+            }
+
+            dv.Sort = e.SortExpression + " " + sortDirection;
+            gvBreeding.DataSource = dv;
+            gvBreeding.DataBind();
+
+            ViewState["SortExpression"] = e.SortExpression;
+            ViewState["SortDirection"] = sortDirection;
+        }
+
+        protected void gvBreeding_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
