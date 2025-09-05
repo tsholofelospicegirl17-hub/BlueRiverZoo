@@ -1,12 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAnimals.aspx.cs" Inherits="BlueRiverZoo.AdminAnimals" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAnimals.aspx.cs" Inherits="BlueRiverZoo.AdminAnimals" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Manage Animals</title>
+    <title>Manage Animals - BLUERZ Zoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="BRZLogo.png" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
-    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f4f4f4; }
         header { background: #2e7d32; color: white; padding: 20px; text-align: center; }
@@ -28,13 +28,13 @@
 <body>
     <form id="form1" runat="server">
         <header><h1>Animal Records</h1></header>
-        
+        <!-- ✅ Updated Home link -->
         <nav class="auto-style1">
-            <a href="AdminHomePage.aspx">Home</a>
-            <a href="AdminMain.aspx">Dashboard</a>
-            <a href="AdminAddStaff.aspx">Staff</a>
+            <a href="AdminMainScreen.aspx">Home</a>
+            <a href="AdminStaffManagement.aspx">Staff Management</a>
             <a href="AdminBreedingPrograms.aspx">Breeding Programs</a>
             <a href="AdminAlerts.aspx">Alerts</a>
+            <a href="MainScreen.aspx">Log Out</a>
         </nav>
         <div class="content">
             <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
