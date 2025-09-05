@@ -1,12 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAlerts.aspx.cs" Inherits="BlueRiverZoo.AdminAlerts" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAlerts.aspx.cs" Inherits="BlueRiverZoo.AdminAlerts" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Zoo Alerts</title>
+    <title>Zoo Alerts - BLUERZ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="BRZLogo.png" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
-    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f4f4f4; }
         header { background: #c62828; color: white; padding: 20px; text-align: center; }
@@ -41,11 +41,11 @@
         <header><h1>Zoo Alerts & Notifications</h1></header>
 
         <nav class="auto-style1">
-            <a href="AdminHomePage.aspx">Home</a>
-            <a href="AdminMain.aspx">Dashboard</a>
-            <a href="AdminAddStaff.aspx">Staff</a>
-            <a href="AdminAnimals.aspx">Animals</a>
-            <a href="AdminReports.aspx">Reports</a>
+            <a href="AdminMainScreen.aspx">Home</a>
+            <a href="AdminStaffManagement.aspx">Staff Management</a>
+            <a href="AnimalsAdmin.aspx">Animals</a>
+            <a href="ReportsAdmin.aspx">Reports</a>
+            <a href="MainScreen.aspx">Log Out</a>
         </nav>
 
         <div class="alerts">
@@ -75,6 +75,8 @@
                 <ItemTemplate>
                     <div class="alert">
                         ⚠️ <strong><%# Eval("Type") %>:</strong> <%# Eval("Description") %>
+                        <br />
+                        <small><i>Posted on <%# Eval("CreatedDate", "{0:MM/dd/yyyy HH:mm}") %></i></small>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
