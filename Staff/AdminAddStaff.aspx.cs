@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.UI;
+using System.Xml.Linq;
 
 namespace BlueRiverZoo
 {
@@ -88,7 +89,7 @@ namespace BlueRiverZoo
             {
                 byte[] bytes = Encoding.UTF8.GetBytes(password);
                 byte[] hash = sha256.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
+                return Convert.ToBase64String(hash); // Store hashed password as Base64
             }
         }
 
