@@ -1,9 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAddStaff.aspx.cs" Inherits="BlueRiverZoo.AdminAddStaff" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAddStaff.aspx.cs" Inherits="BlueRiverZoo.AdminAddStaff" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Add Staff - BLUERZ Zoo</title>
+    <link rel="icon" type="image/png" href="BRZLogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
     <style>
@@ -22,14 +23,33 @@
         }
         .btn { margin-top: 20px; width: 100%; padding: 12px; background: #2e7d32; color: white; border: none; border-radius: 6px; }
         .btn:hover { background: #1b5e20; }
-        .auto-style1 { text-align: center; }
-        .auto-style2 {
-            border-style: none; border-color: inherit; border-width: medium;
-            width: 100%; padding: 12px; background: #2e7d32; color: white; border-radius: 6px;
+        .auto-style1 {
+            text-align: center;
         }
-        .newStyle1, .newStyle2, .newStyle3 {
+        .auto-style2 {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            width: 100%;
+            padding: 12px;
+            background: #2e7d32;
+            color: white;
+            border-radius: 6px;
+        }
+        .newStyle1 {
             font-family: "Courier New", Courier, monospace;
-            font-size: small; color: #CC0000;
+            font-size: small;
+            color: #CC0000;
+        }
+        .newStyle2 {
+            font-family: "Courier New", Courier, monospace;
+            font-size: small;
+            color: #CC0000;
+        }
+        .newStyle3 {
+            font-family: "Courier New", Courier, monospace;
+            font-size: small;
+            color: #CC0000;
         }
     </style>
 </head>
@@ -37,40 +57,29 @@
     <form id="form1" runat="server">
         <header><h1>Add New Staff Member</h1></header>
         <nav class="auto-style1">
-            <a href="WillemHomePage.aspx">Home</a>
-            <a href="AdminMain.aspx">Dashboard</a>
-            <a href="StaffAdmin.aspx">Manage Staff</a>
-            <a href="UpdateStaff.aspx">Update Staff</a>
-            <a href="RemoveStaff.aspx">Remove Staff</a>
+            <a href="AdminMainScreen.aspx">Home</a>
+            <a href="AdminStaffManagement.aspx">Staff Management</a>
         </nav>
         
         <div class="form-container">
             <label for="txtName">Full Name&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
-                    ControlToValidate="txtName" CssClass="newStyle1" ErrorMessage="Please enter a name!"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" CssClass="newStyle1" ErrorMessage="Please eneter a name!"></asp:RequiredFieldValidator>
             </label>
-            <asp:TextBox ID="txtName" runat="server" ForeColor="Gray" Width="100%"
-                placeholder="Staff's name" OnTextChanged="txtName_TextChanged" />
+            &nbsp;<asp:TextBox ID="txtName" runat="server" ForeColor="Gray" Width="100%" placeholder="Staff's name" OnTextChanged="txtName_TextChanged" />
 
-            <label for="txtSurname">Surname&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
-                    ControlToValidate="txtSurname" CssClass="newStyle2" ErrorMessage="Please enter a surname!"></asp:RequiredFieldValidator>
+            <label for="txtSurname">Surname&nbsp;&nbsp;&nbsp;
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSurname" CssClass="newStyle2" ErrorMessage="Please enter a surname!"></asp:RequiredFieldValidator>
             </label>
-            <asp:TextBox ID="txtSurname" runat="server" ForeColor="Gray" Width="100%" placeholder="Staff's surname" />
+            &nbsp;<asp:TextBox ID="txtSurname" runat="server" ForeColor="Gray" Width="100%" placeholder="Staff's surname" />
 
             <label for="txtEmail">Email&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server"
-                    ControlToValidate="txtEmail" CssClass="newStyle2" ErrorMessage="Please enter an email!"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
-                    ControlToValidate="txtEmail" CssClass="newStyle3" ErrorMessage="Please enter a valid email!"
-                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+              <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ControlToValidate="txtEmail" CssClass="newStyle2" ErrorMessage="Please enter a surname!"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" CssClass="newStyle3" ErrorMessage="Please enter a valid email!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             </label>
-            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" ForeColor="Gray" Width="100%" placeholder="Staff's Email" />
+            &nbsp;<asp:TextBox ID="txtEmail" runat="server" TextMode="Email" ForeColor="Gray" Width="100%" placeholder="Staff's Email" />
 
-            <label for="txtPassword">Password&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
-                    ControlToValidate="txtPassword" CssClass="newStyle2" ErrorMessage="Please enter a Password!"></asp:RequiredFieldValidator>
-            </label>
+            <label for="txtPassword">Password</label>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword" CssClass="newStyle2" ErrorMessage="Please enter a Password!"></asp:RequiredFieldValidator>
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ForeColor="Gray" Width="100%" placeholder="Create a password" />
 
             <label for="ddlRole">Role</label>
@@ -78,6 +87,7 @@
                 <asp:ListItem>Keeper</asp:ListItem>
                 <asp:ListItem>Veterinarian</asp:ListItem>
                 <asp:ListItem>Guide</asp:ListItem>
+                <asp:ListItem>Staff</asp:ListItem>
                 <asp:ListItem>Admin</asp:ListItem>
             </asp:DropDownList>
 
@@ -87,4 +97,3 @@
     </form>
 </body>
 </html>
-
