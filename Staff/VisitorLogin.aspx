@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorLogin.aspx.cs" Inherits="BlueRiverZoo.VisitorLogin" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorLogin.aspx.cs" Inherits="BlueRiverZoo.VisitorLogin" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -30,10 +30,12 @@
         <label>Email</label>
         <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Enter email"/>
         <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="⚠ Email is required" ForeColor="Red" Display="Dynamic" />
+        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="⚠ Enter a valid email address" ForeColor="Red" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
 
         <label>Password</label>
         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter password"/>
         <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="⚠ Password is required" ForeColor="Red" Display="Dynamic" />
+
         <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn" OnClick="btnLogin_Click" />
         <div class="msg"><asp:Label ID="lblMsg" runat="server" /></div>
 
