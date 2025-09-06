@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminUpdateStaff.aspx.cs" Inherits="BlueRiverZoo.AdminUpdateStaff" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminUpdateStaff.aspx.cs" Inherits="BlueRiverZoo.AdminUpdateStaff" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Update Staff</title>
-    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
+    <link rel="icon" type="image/png" href="BRZLogo.png" />
+    <title>Update Staff - BLUERZ Zoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
     <style>
@@ -38,15 +38,12 @@
             <p>Select a column and update its value</p>
         </header>
         <nav class="auto-style1">
-            <a href="AdminHomePage.aspx">Home</a>
-            <a href="AdminMain.aspx">Dashboard</a>
-            <a href="AdminStaff.aspx">Manage Staff</a>
-            <a href="AdminAddStaff.aspx">Add Staff</a>
-            <a href="AdminRemoveStaff.aspx">Remove Staff</a>
+            <a href="AdminMainScreen.aspx">Home</a>
+            <a href="AdminStaffManagement.aspx">Staff Management</a>
         </nav>
 
         <div class="content">
-            
+            <!-- Dropdown for Column Names -->
             <label for="ddlColumn">Select Field</label>
             <asp:DropDownList ID="ddlColumn" runat="server" CssClass="input">
                 <asp:ListItem Value="--Select Column--"></asp:ListItem>
@@ -58,18 +55,19 @@
                 <asp:ListItem Value="Role"></asp:ListItem>
             </asp:DropDownList>
 
+            <!-- Old Value -->
             <label for="txtOldValue">Current Entry&nbsp;&nbsp;
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtOldValue" CssClass="newStyle1" ErrorMessage="Please enter the entry to change"></asp:RequiredFieldValidator>
             </label>
 &nbsp;<asp:TextBox ID="txtOldValue" runat="server" CssClass="input"></asp:TextBox>
 
-            
+            <!-- New Value -->
             <label for="txtNewValue">New Entry&nbsp;&nbsp;
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNewValue" CssClass="newStyle2" ErrorMessage="Please enter the new entry"></asp:RequiredFieldValidator>
             </label>
 &nbsp;<asp:TextBox ID="txtNewValue" runat="server" CssClass="input"></asp:TextBox>
 
-            
+            <!-- Update Button -->
             <asp:Button ID="btnUpdate" runat="server" Text="Update Staff" CssClass="btn" OnClick="btnUpdate_Click" />
 
             <br /><br />
