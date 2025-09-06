@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 
 namespace BlueRiverZoo
 {
-    public partial class MainContact : System.Web.UI.Page
+    public partial class Contact : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
