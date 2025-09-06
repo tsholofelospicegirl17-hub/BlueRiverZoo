@@ -1,12 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminMain.aspx.cs" Inherits="BlueRiverZoo.AdminMain" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminMainScreen.aspx.cs" Inherits="BlueRiverZoo.AdminMainScreen" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Staff Zoo - Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="BRZLogo.png" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
-    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f4f4f4; }
         header { background: #2e7d32; color: white; padding: 20px; text-align: center; }
@@ -33,12 +33,15 @@
             <h1>Admin Dashboard</h1>
             <p>Manage zoo operations with ease</p>
         </header>
-        <nav class="auto-style2">
-            <a href="AdminHomePage.aspx">Home</a> 
-            <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            &nbsp;<a href="AdminReports.aspx">Reports</a> 
-            <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; </span>
-        </nav>
+        <nav class="nav-bar">
+    <div class="center">
+        <a href="AdminReports.aspx">Reports</a>
+    </div>
+    <div class="right">
+        <a href="MainScreen.aspx">Log Out</a>
+    </div>
+</nav>
+
 
         <div class="dashboard">
             <div class="card">
@@ -49,7 +52,7 @@
             <div class="card">
                 <h2>Staff</h2>
                 <p>Add or manage zoo staff members.</p>
-                <button type="button" class="btn" onclick="window.location.href='AdminStaff.aspx'">Go</button>
+                <button type="button" class="btn" onclick="window.location.href='AdminStaffManagement.aspx'">Go</button>
             </div>
             <div class="card">
                 <h2>Alerts</h2>
