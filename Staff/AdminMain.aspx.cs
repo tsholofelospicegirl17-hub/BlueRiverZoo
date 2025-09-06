@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -7,36 +9,51 @@ using System.Web.UI.WebControls;
 
 namespace BlueRiverZoo
 {
-    public partial class AdminMainScreen : System.Web.UI.Page
+    public partial class AdminStaffManagement : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                LoadStaffData();
+            }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        private void LoadStaffData()
         {
+            // 🔹 Replace this with your actual connection string
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM EmployeeTable";  // get all rows from StaffTable
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+            }
         }
 
-        protected void btnStaff_Click(object sender, EventArgs e)
+        protected void btnAdd_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StaffAdmin.aspx");
+            Response.Redirect("AdminAddStaff.aspx");
         }
 
-        protected void btnAlerts_Click(object sender, EventArgs e)
+        protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AlertsAdmin.aspx");
+            Response.Redirect("AdminUpdateStaff.aspx");
         }
 
-        protected void btnReports_Click(object sender, EventArgs e)
+        protected void btnRemove_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ReportsAdmin.aspx");
+            Response.Redirect("AdminRemoveStaff.aspx");
         }
 
-        protected void btnAnimals_Click(object sender, EventArgs e)
+        protected void btnBack_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AnimalsAdmin.aspx");
+            Response.Redirect("AdminMain.aspx");
         }
     }
 }
