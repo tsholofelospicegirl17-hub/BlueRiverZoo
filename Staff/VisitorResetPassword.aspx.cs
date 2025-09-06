@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.UI;
+using System.Text.RegularExpressions;
 
 namespace BlueRiverZoo
 {
@@ -18,7 +19,17 @@ namespace BlueRiverZoo
 
             lnkLogin.Visible = false;
         }
-
+        public bool IsValidPassword(string password)
+        {
+            //Password requirements:
+            // - At least 6 characters
+            // - At least 1 uppercase letter
+            // - At least 1 lowercase letter
+            // - At least 1 digit
+            // - At least 1 special symbol
+            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?/~\-]).{6,}$";
+            return Regex.IsMatch(password, pattern);
+        }
         protected void btnChange_Click(object sender, EventArgs e)
         {
             string newPassword = txtNewPass.Text.Trim();
@@ -32,6 +43,13 @@ namespace BlueRiverZoo
             if (newPassword != confirmPassword)
             {
                 lblMsg.Text = "⚠ Passwords do not match!";
+                lblMsg.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            if (!IsValidPassword(newPassword))
+            {
+                lblMsg.Text = "⚠ Password must be at least 6 characters and include an uppercase letter, lowercase letter, number, and symbol.";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
                 return;
             }
