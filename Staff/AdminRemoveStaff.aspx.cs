@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using System.Web.UI;
 
@@ -16,7 +16,7 @@ namespace BlueRiverZoo
             }
         }
 
-        
+        // Load all staff into GridView
         private void LoadStaff()
         {
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -29,7 +29,7 @@ namespace BlueRiverZoo
             }
         }
 
-        //Delete staff by Email
+        // Delete staff by Email
         protected void btnDeleteByEmail_Click(object sender, EventArgs e)
         {
             lblMessage.Text = "";
@@ -63,7 +63,7 @@ namespace BlueRiverZoo
                 }
             }
 
-            //Refresh the GridView
+            // Refresh GridView
             LoadStaff();
             txtEmail.Text = "";
         }
