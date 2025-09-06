@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminStaff.aspx.cs" Inherits="BlueRiverZoo.AdminStaff" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminStaffManagement.aspx.cs" Inherits="BlueRiverZoo.AdminStaffManagement" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Staff Management - BLUERZ Zoo</title>
-    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
+    <link rel="icon" type="image/png" href="BRZLogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
     <style>
@@ -46,13 +46,13 @@
             <h1>Staff Management</h1>
             <p>View and manage zoo staff members</p>
         </header>
-        
+        <!-- ✅ Updated Home link -->
         <nav>
-            <a href="AdminHomePage.aspx">Home</a>
-            <a href="AdminMain.aspx">Dashboard</a>
+            <a href="AdminMainScreen.aspx">Home</a>
             <a href="AdminAlerts.aspx">Alerts</a>
             <a href="AdminAnimals.aspx">Animals</a>
             <a href="AdminReports.aspx">Reports</a>
+            <a href="MainScreen.aspx">Log Out</a>
         </nav>
 
         <div class="content">
