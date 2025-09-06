@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorReservations.aspx.cs" Inherits="BlueRiverZoo.VisitorReservations" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorReservations.aspx.cs" Inherits="BlueRiverZoo.VisitorReservations" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -58,7 +58,7 @@
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" onclick="closeMenu()">✖ Close</a>
             <a href="VisitorDashboard.aspx">🏠 Home</a>
-            <a href="VisitorReservations.aspx">🎟️ Book Tickets</a>
+            <!--<a href="VisitorReservations.aspx">🎟️ Book Tickets</a>-->
             <a href="VisitorMyReservations.aspx">📋 My Reservations</a>
             
             <asp:LinkButton ID="btnLogout" runat="server" Text="🚪 Logout" OnClick="btnLogout_Click" />
@@ -81,6 +81,8 @@
 
                 <label>Number of Tickets</label>
                 <asp:TextBox ID="txtTickets" runat="server" TextMode="Number" AutoPostBack="true" OnTextChanged="Recalculate" placeholder="Enter number of tickets" />
+                <asp:RequiredFieldValidator ID="rfvTickets" runat="server" ControlToValidate="txtTickets" ErrorMessage="⚠ Number of tickets required" ForeColor="Red" Display="Dynamic" />
+                <asp:RangeValidator ID="rvTickets" runat="server" ControlToValidate="txtTickets" MinimumValue="1" MaximumValue="20" Type="Integer" ErrorMessage="⚠ Enter tickets between 1 and 20" ForeColor="Red" Display="Dynamic" />
 
                 <label>Payment Method</label>
                 <asp:DropDownList ID="ddlPayment" runat="server">
