@@ -2,6 +2,7 @@ using System;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web.UI;
 
 namespace BlueRiverZoo
@@ -28,7 +29,17 @@ namespace BlueRiverZoo
                 return sb.ToString();
             }
         }
-
+        public bool IsValidPassword(string password)
+        {
+            // Password requirements:
+            // - At least 6 characters
+            // - At least 1 uppercase letter
+            // - At least 1 lowercase letter
+            // - At least 1 digit
+            // - At least 1 special symbol
+            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?/~\-]).{6,}$";
+            return Regex.IsMatch(password, pattern);
+        }
         protected void btnSignup_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtSurname.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtConfirmPassword.Text))
@@ -45,6 +56,13 @@ namespace BlueRiverZoo
             if (password != confirm)
             {
                 lblMsg.Text = "⚠ Passwords do not match!";
+                lblMsg.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            if (!IsValidPassword(password))
+            {
+                lblMsg.Text = "⚠ Password must be at least 6 characters and include an uppercase letter, lowercase letter, number, and symbol.";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
                 return;
             }
@@ -75,13 +93,14 @@ namespace BlueRiverZoo
                     SqlCommand phoneCmd = new SqlCommand(checkPhone, con);
                     phoneCmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
                     int phoneCount = (int)phoneCmd.ExecuteScalar();
-                    
+
                     if (phoneCount > 0)
                     {
                         lblMsg.Text = "⚠ This phone number is already registered.";
                         lblMsg.ForeColor = System.Drawing.Color.Red;
                         return;
                     }
+
 
                     string sql = @"INSERT INTO Visitors (Name, Surname, Email, Phone, PasswordHash) VALUES (@Name, @Surname, @Email, @Phone, @PasswordHash)";
                     SqlCommand cmd = new SqlCommand(sql, con);
