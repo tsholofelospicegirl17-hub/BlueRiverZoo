@@ -49,6 +49,8 @@
             <label for="txtNewPass">New Password</label>
             <asp:TextBox ID="txtNewPass" runat="server" TextMode="Password" CssClass="input-field" placeholder="New Password" />
             <asp:RequiredFieldValidator ID="rfvNewPass" runat="server" ControlToValidate="txtNewPass" ErrorMessage="⚠ New password required" ForeColor="Red" Display="Dynamic" />
+            <asp:RegularExpressionValidator ID="revPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="⚠ Password must be at least 6 characters, include uppercase, lowercase, number & symbol" ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?/~\-]).{6,}$" ForeColor="Red" Display="Dynamic" />
+            <small>(Password must be at least 6 characters and include 1 uppercase letter, 1 lowercase letter, 1 number, 1 special symbol)</small>
         </div>
 
         <div style="margin-bottom:16px;">
