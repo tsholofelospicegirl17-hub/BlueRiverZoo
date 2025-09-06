@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
@@ -29,17 +29,26 @@ namespace BlueRiverZoo
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text;
             string hashed = HashPassword(password);
+            
+            if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            {
+                lblMsg.Text = "⚠ All fields are required.";
+                lblMsg.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
 
             using (SqlConnection con = new SqlConnection(connStr))
             {
                 try
                 {
+
                     con.Open();
 
                     string sql = "SELECT VisitorID, Name FROM Visitors WHERE Email=@Email AND PasswordHash=@PasswordHash";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@PasswordHash", hashed);
+
 
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
