@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
@@ -8,6 +8,7 @@ namespace BlueRiverZoo
 {
     public partial class VisitorMyReservations : System.Web.UI.Page
     {
+        
         string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -37,7 +38,22 @@ namespace BlueRiverZoo
                 gvReservations.DataBind();
             }
         }
+        protected void gvReservations_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                string status = DataBinder.Eval(e.Row.DataItem, "Status").ToString();
 
+                Button btnCancel = (Button)e.Row.FindControl("btnCancel");
+                Button btnTicket = (Button)e.Row.FindControl("btnTicket");
+
+                if (status == "Cancelled")
+                {
+                    if (btnCancel != null) btnCancel.Visible = false;
+                    if (btnTicket != null) btnTicket.Visible = false;
+                }
+            }
+        }
         protected void gvReservations_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int reservationID = Convert.ToInt32(e.CommandArgument);
@@ -58,13 +74,15 @@ namespace BlueRiverZoo
 
                 lblMsg.ForeColor = System.Drawing.Color.Green;
                 lblMsg.Text = "Reservation cancelled successfully.";
-                LoadReservations(); 
+                LoadReservations();
             }
             else if (e.CommandName == "ViewTicket")
             {
                 Response.Redirect("VisitorTicket.aspx?id=" + reservationID);
             }
         }
+        
+
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
