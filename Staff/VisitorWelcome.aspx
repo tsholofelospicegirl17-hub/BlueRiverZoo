@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorWelcome.aspx.cs" Inherits="BlueRiverZoo.VisitorWelcome" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorWelcome.aspx.cs" Inherits="BlueRiverZoo.VisitorWelcome" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
