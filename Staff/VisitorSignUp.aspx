@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorSignUp.aspx.cs" Inherits="BlueRiverZoo.VisitorSignUp" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorSignUp.aspx.cs" Inherits="BlueRiverZoo.VisitorSignUp" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -30,28 +30,35 @@
         <h2>Create Account</h2>
         <label>Name</label>
         <asp:TextBox ID="txtName" runat="server" placeholder="Enter name"/>
-        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" ErrorMessage="⚠ Name is required" ForeColor="Red" Display="Dynamic" />
+
+        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" ErrorMessage="⚠ Name required" ForeColor="Red" Display="Dynamic" />
 
         <label>Surname</label>
         <asp:TextBox ID="txtSurname" runat="server" placeholder="Enter surname"/>
-        <asp:RequiredFieldValidator ID="rfvSurname" runat="server" ControlToValidate="txtSurname" ErrorMessage="⚠ Surname is required" ForeColor="Red" Display="Dynamic" />
+
+        <asp:RequiredFieldValidator ID="rfvSurname" runat="server" ControlToValidate="txtSurname" ErrorMessage="⚠ Surname required" ForeColor="Red" Display="Dynamic" />
 
         <label>Email</label>
         <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Enter email"/>
-        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="⚠ Email is required" ForeColor="Red" Display="Dynamic" />
+
+        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="⚠ Email required" ForeColor="Red" Display="Dynamic" />
+        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="⚠ Invalid email format"  ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" Display="Dynamic" />
 
         <label>Phone Number</label>
         <asp:TextBox ID="txtPhone" runat="server" placeholder="Enter phone number"/>
-        <asp:RequiredFieldValidator ID="rfvNumber" runat="server" ControlToValidate="txtPhone" ErrorMessage="⚠ Phone number is required" ForeColor="Red" Display="Dynamic" />
+
+        <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ControlToValidate="txtPhone" ErrorMessage="⚠ Phone number required" ForeColor="Red" Display="Dynamic" />
+        <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="txtPhone" ErrorMessage="⚠ Enter a valid phone number (10 digits)" ValidationExpression="^\d{10}$" ForeColor="Red" Display="Dynamic" />
 
         <label>Password</label>
         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter password"/>
-        <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="⚠ Password is required" ForeColor="Red" Display="Dynamic" />
+
+        <asp:RequiredFieldValidator ID="rfvPass" runat="server" ControlToValidate="txtPassword" ErrorMessage="⚠ Password required" ForeColor="Red" Display="Dynamic" />
 
         <label>Confirm Password</label>
         <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" placeholder="Re-enter password"/>
-        <asp:RequiredFieldValidator ID="rfvConfirmPassword" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="⚠ Confirm your password" ForeColor="Red" Display="Dynamic" />
-        <asp:CompareValidator ID="comparePassword" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword" ErrorMessage="⚠ Passwords do not match" ForeColor="Red" Display="Dynamic" />
+        <asp:RequiredFieldValidator ID="rfvConfirm" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="⚠ Confirm password" ForeColor="Red" Display="Dynamic" />
+        <asp:CompareValidator ID="cvPassword" runat="server" ControlToValidate="txtConfirmPassword" ControlToCompare="txtPassword" ErrorMessage="⚠ Passwords do not match" ForeColor="Red" Display="Dynamic" />
         <asp:Button ID="btnSignup" runat="server" Text="Sign Up" CssClass="btn" OnClick="btnSignup_Click" />
         <div class="msg"><asp:Label ID="lblMsg" runat="server" /></div>
 
