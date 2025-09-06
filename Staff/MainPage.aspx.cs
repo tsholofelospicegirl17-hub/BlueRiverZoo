@@ -1,40 +1,42 @@
-﻿using System;
+using System;
 using System.Web;
 using System.Web.UI;
 
 namespace BlueRiverZoo
 {
-    public partial class MainPage : Page
+    public partial class MainScreen : Page
     {
-        
-
         public const string ADMIN = "Admin";
         public const string STAFF = "Staff";
         public const string CUSTOMER = "Customer";
 
-        HttpCookie user = new HttpCookie("Selection");
-
         protected void btnAdmin_Click(object sender, EventArgs e)
         {
+            HttpCookie user = new HttpCookie("Selection");
             user["Selection"] = ADMIN;
-            Response.Cookies.Add(user);
             user.Expires = DateTime.Now.AddMinutes(15);
-            Response.Redirect("AdminMain.aspx");
+            Response.Cookies.Add(user);
+
+            Response.Redirect("StaffLogin.aspx");
         }
 
         protected void btnStaff_Click(object sender, EventArgs e)
         {
+            HttpCookie user = new HttpCookie("Selection");
             user["Selection"] = STAFF;
-            Response.Cookies.Add(user);
             user.Expires = DateTime.Now.AddMinutes(15);
-            Response.Redirect("LoginPage.aspx");
+            Response.Cookies.Add(user);
+
+            Response.Redirect("StaffLogin.aspx");
         }
 
         protected void btnVisitors_Click(object sender, EventArgs e)
         {
+            HttpCookie user = new HttpCookie("Selection");
             user["Selection"] = CUSTOMER;
-            Response.Cookies.Add(user);
             user.Expires = DateTime.Now.AddMinutes(15);
+            Response.Cookies.Add(user);
+
             Response.Redirect("VisitorWelcome.aspx");
         }
     }
