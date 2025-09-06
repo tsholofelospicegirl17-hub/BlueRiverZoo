@@ -70,6 +70,18 @@ namespace BlueRiverZoo
                         return;
                     }
 
+                    //check if phone exists
+                    string checkPhone = "SELECT COUNT(*) FROM Visitors WHERE Phone=@Phone";
+                    SqlCommand phoneCmd = new SqlCommand(checkPhone, con);
+                    phoneCmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
+                    int phoneCount = (int)phoneCmd.ExecuteScalar();
+                    
+                    if (phoneCount > 0)
+                    {
+                        lblMsg.Text = "⚠ This phone number is already registered.";
+                        lblMsg.ForeColor = System.Drawing.Color.Red;
+                        return;
+                    }
 
                     string sql = @"INSERT INTO Visitors (Name, Surname, Email, Phone, PasswordHash) VALUES (@Name, @Surname, @Email, @Phone, @PasswordHash)";
                     SqlCommand cmd = new SqlCommand(sql, con);
