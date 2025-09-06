@@ -1,12 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainContact.aspx.cs" Inherits="BlueRiverZoo.MainContact" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="BlueRiverZoo.Contact" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Contact & Help Desk</title>
+    <title>Contact & Help Desk - BLUERZ Zoo System</title>
+    <link rel="icon" type="image/png" href="BRZLogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
-    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -81,7 +81,7 @@
         </header>
 
         <nav>
-            <a href="MainPage.aspx">Home</a>
+            <a href="MainScreen.aspx">Home</a>
         </nav>
 
         <div class="content">
