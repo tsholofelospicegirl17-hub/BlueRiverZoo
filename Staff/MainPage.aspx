@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="BlueRiverZoo.MainPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainScreen.aspx.cs" Inherits="BlueRiverZoo.MainScreen" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Welcome to Blue River Zoo</title>
+    <title>Blue River Zoo System - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="BRZLogo.png" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
@@ -32,7 +32,7 @@
         </header>
 
         <nav class="auto-style1">
-            <a href="MainContact.aspx">Contact</a>
+            <a href="Contact.aspx">Contact</a>
         </nav>
 
         <div class="content">
