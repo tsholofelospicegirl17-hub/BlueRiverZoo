@@ -43,7 +43,7 @@
 <form id="form1" runat="server">
     <div class="navbar">
         <span class="menu-btn" onclick="openMenu()">&#9776;</span>
-        <div class="welcome">My Reservations</div>
+        <div class="welcome">📋 My Reservations</div>
     </div>
 
     <div id="mySidebar" class="sidebar">
@@ -56,7 +56,7 @@
     </div>
 
     <div class="content">
-        <h2>📋 Your Bookings</h2>
+        <h2>📋 Your Reservations</h2>
 
         <asp:GridView ID="gvReservations" runat="server" AutoGenerateColumns="False" CssClass="grid" DataKeyNames="ReservationID" OnRowCommand="gvReservations_RowCommand" OnRowDataBound="gvReservations_RowDataBound">
             <Columns>
