@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace BlueRiverZoo
 {
-    public partial class AdminStaff : System.Web.UI.Page
+    public partial class AdminStaffManagement : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,12 +21,12 @@ namespace BlueRiverZoo
 
         private void LoadStaffData()
         {
-            
+            // 🔹 Replace this with your actual connection string
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Animals.mdf;Integrated Security=True;Connect Timeout=30";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM EmployeeTable";  
+                string query = "SELECT * FROM EmployeeTable";  // get all rows from StaffTable
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
