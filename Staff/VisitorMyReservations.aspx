@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorMyReservations.aspx.cs" Inherits="BlueRiverZoo.VisitorMyReservations" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisitorMyReservations.aspx.cs" Inherits="BlueRiverZoo.VisitorMyReservations" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -50,7 +50,7 @@
         <a href="javascript:void(0)" onclick="closeMenu()">✖ Close</a>
         <a href="VisitorHome.aspx">🏠 Home</a>
         <a href="VisitorReservations.aspx">🎟️ Book Tickets</a>
-        <a href="VisitorMyReservations.aspx">📋 My Reservations</a>
+        <!--<a href="VisitorMyReservations.aspx">📋 My Reservations</a>-->
         
         <asp:LinkButton ID="btnLogout" runat="server" Text="🚪 Logout" OnClick="btnLogout_Click" />
     </div>
@@ -58,7 +58,7 @@
     <div class="content">
         <h2>📋 Your Bookings</h2>
 
-        <asp:GridView ID="gvReservations" runat="server" AutoGenerateColumns="False" CssClass="grid" DataKeyNames="ReservationID" OnRowCommand="gvReservations_RowCommand">
+        <asp:GridView ID="gvReservations" runat="server" AutoGenerateColumns="False" CssClass="grid" DataKeyNames="ReservationID" OnRowCommand="gvReservations_RowCommand" OnRowDataBound="gvReservations_RowDataBound">
             <Columns>
                 <asp:BoundField DataField="ReservationID" HeaderText="ID" />
                 <asp:BoundField DataField="TicketType" HeaderText="Ticket Type" />
@@ -70,10 +70,8 @@
 
                 <asp:TemplateField HeaderText="Actions">
                     <ItemTemplate>
-                        <asp:Button ID="btnTicket" runat="server" Text="View Ticket" CssClass="btn-ticket" CommandName="ViewTicket" CommandArgument='<%# Eval("ReservationID") %>' Visible='<%# Eval("Status").ToString() != "Cancelled" %>' />
-
-                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-cancel" CommandName="CancelRes" CommandArgument='<%# Eval("ReservationID") %>' Visible='<%# Eval("Status").ToString() != "Cancelled" %>' />
-
+                        <asp:Button ID="btnTicket" runat="server" Text="View Ticket" CssClass="btn-ticket" CommandName="ViewTicket" CommandArgument='<%# Eval("ReservationID") %>' />
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-cancel" CommandName="CancelRes" CommandArgument='<%# Eval("ReservationID") %>' />
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
