@@ -54,7 +54,8 @@
         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter password"/>
 
         <asp:RequiredFieldValidator ID="rfvPass" runat="server" ControlToValidate="txtPassword" ErrorMessage="⚠ Password required" ForeColor="Red" Display="Dynamic" />
-
+        <asp:RegularExpressionValidator ID="revPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="⚠ Password must be at least 6 characters, include uppercase, lowercase, number & symbol" ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?/~\-]).{6,}$" ForeColor="Red" Display="Dynamic" />
+        <small>(Password must be at least 6 characters and include 1 uppercase letter, 1 lowercase letter, 1 number, 1 special symbol)</small>
         <label>Confirm Password</label>
         <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" placeholder="Re-enter password"/>
         <asp:RequiredFieldValidator ID="rfvConfirm" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="⚠ Confirm password" ForeColor="Red" Display="Dynamic" />
