@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -25,6 +25,10 @@ namespace BlueRiverZoo
             {
                 int price = int.Parse(ddlTicketType.SelectedValue);
                 int tickets = string.IsNullOrEmpty(txtTickets.Text) ? 0 : int.Parse(txtTickets.Text);
+                if (tickets < 0)
+                {
+                    tickets = 0;
+                }
                 lblTotal.Text = "R" + (price * tickets).ToString("0.00");
             }
             catch
@@ -44,12 +48,13 @@ namespace BlueRiverZoo
 
         protected void btnReserve_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTickets.Text) || int.Parse(txtTickets.Text) <= 0)
+            if (!int.TryParse(txtTickets.Text, out int tickets) || tickets <= 0)
             {
-                lblMsg.Text = "⚠ Enter a valid number of tickets.";
+                lblMsg.Text = "⚠ Please enter a valid number of tickets (greater than 0).";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
                 return;
             }
+            
 
             if (calVisitDate.SelectedDate == DateTime.MinValue)
             {
@@ -60,16 +65,14 @@ namespace BlueRiverZoo
 
             int visitorID = Convert.ToInt32(Session["VisitorID"]);
             int price = int.Parse(ddlTicketType.SelectedValue);
-            int tickets = int.Parse(txtTickets.Text);
+            //int tickets = int.Parse(txtTickets.Text);
             decimal total = price * tickets;
             DateTime visitDate = calVisitDate.SelectedDate;
             string payment = ddlPayment.SelectedValue;
 
             using (SqlConnection con = new SqlConnection(connStr))
             {
-                string sql = @"INSERT INTO Reservations 
-                    (VisitorID, TicketType, VisitDate, NumTickets, TotalCost, PaymentMethod, Status)
-                    VALUES (@VisitorID,@TicketType,@VisitDate,@NumTickets,@TotalCost,@Payment,@Status)";
+                string sql = @"INSERT INTO Reservations (VisitorID, TicketType, VisitDate, NumTickets, TotalCost, PaymentMethod, Status) VALUES (@VisitorID,@TicketType,@VisitDate,@NumTickets,@TotalCost,@Payment,@Status)";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@VisitorID", visitorID);
@@ -85,8 +88,7 @@ namespace BlueRiverZoo
             }
 
             lblMsg.ForeColor = System.Drawing.Color.Green;
-            lblMsg.Text = $"✅ Reservation successful!<br/>💵 Payment Method: <b>{payment}</b><br/>" +
-                          $"Please pay at the Blue River Zoo gate upon arrival.";
+            lblMsg.Text = $"✅ Reservation successful!<br/>💵 Payment Method: <b>{payment}</b><br/>" + $"Please pay at the Blue River Zoo gate upon arrival.";
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
