@@ -48,7 +48,7 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" onclick="closeMenu()">✖ Close</a>
-        <a href="VisitorHome.aspx">🏠 Home</a>
+        <a href="VisitorDashboard.aspx">🏠 Home</a>
         <a href="VisitorReservations.aspx">🎟️ Book Tickets</a>
         <!--<a href="VisitorMyReservations.aspx">📋 My Reservations</a>-->
         
