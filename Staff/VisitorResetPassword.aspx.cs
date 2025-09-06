@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
@@ -23,10 +23,9 @@ namespace BlueRiverZoo
         {
             string newPassword = txtNewPass.Text.Trim();
             string confirmPassword = txtConfirmPass.Text.Trim();
-
             if (string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword))
             {
-                lblMsg.Text = "⚠ Please fill in all fields.";
+                lblMsg.Text = "⚠ Both passwords are required.";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
                 return;
             }
