@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
@@ -16,7 +16,7 @@ namespace BlueRiverZoo
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
-            string email = txtEmail.Text.Trim().ToLower();
+            string email = txtEmail.Text.Trim();
 
             if (string.IsNullOrEmpty(email))
             {
