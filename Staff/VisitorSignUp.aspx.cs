@@ -55,14 +55,22 @@ namespace BlueRiverZoo
             {
                 try
                 {
-                    string name = txtName.Text.Trim(); ;
-                    string surname = txtSurname.Text.Trim();
-                    string email = txtEmail.Text.Trim();
-                    string phone = txtPhone.Text.Trim();
-
                     
-
                     con.Open();
+                    //check if email already exists
+                    string checkEmail = "SELECT COUNT(*) FROM Visitors WHERE Email=@Email";
+                    SqlCommand checkCmd = new SqlCommand(checkEmail, con);
+                    checkCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
+
+                    int count = (int)checkCmd.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        lblMsg.Text = "⚠ This email is already registered.";
+                        lblMsg.ForeColor = System.Drawing.Color.Red;
+                        return;
+                    }
+
+
                     string sql = @"INSERT INTO Visitors (Name, Surname, Email, Phone, PasswordHash) VALUES (@Name, @Surname, @Email, @Phone, @PasswordHash)";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
