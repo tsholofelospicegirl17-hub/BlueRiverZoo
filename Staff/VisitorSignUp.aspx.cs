@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
@@ -31,8 +31,16 @@ namespace BlueRiverZoo
 
         protected void btnSignup_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtSurname.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtConfirmPassword.Text))
+            {
+                lblMsg.Text = "⚠ Please fill in all required fields.";
+                lblMsg.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
             string password = txtPassword.Text.Trim();
             string confirm = txtConfirmPassword.Text.Trim();
+
 
             if (password != confirm)
             {
@@ -47,9 +55,15 @@ namespace BlueRiverZoo
             {
                 try
                 {
+                    string name = txtName.Text.Trim(); ;
+                    string surname = txtSurname.Text.Trim();
+                    string email = txtEmail.Text.Trim();
+                    string phone = txtPhone.Text.Trim();
+
+                    
+
                     con.Open();
-                    string sql = @"INSERT INTO Visitors (Name, Surname, Email, Phone, PasswordHash) 
-                                   VALUES (@Name, @Surname, @Email, @Phone, @PasswordHash)";
+                    string sql = @"INSERT INTO Visitors (Name, Surname, Email, Phone, PasswordHash) VALUES (@Name, @Surname, @Email, @Phone, @PasswordHash)";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
                     cmd.Parameters.AddWithValue("@Surname", txtSurname.Text.Trim());
