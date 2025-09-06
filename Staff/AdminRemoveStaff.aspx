@@ -1,13 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminRemoveStaff.aspx.cs" Inherits="BlueRiverZoo.AdminRemoveStaff" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminRemoveStaff.aspx.cs" Inherits="BlueRiverZoo.AdminRemoveStaff" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Remove Staff</title>
-    
+    <link rel="icon" type="image/png" href="BRZLogo.png" />
+    <title>Remove Staff - BLUERZ Zoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/StyleSheet1.css" rel="stylesheet" />
-    <link rel ="website icon" type ="png" href ="BRZLogo.png" />
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f4f4f4; }
         header { background: #d32f2f; color: white; padding: 20px; text-align: center; }
@@ -27,21 +26,19 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        
+        <!-- Header -->
         <header>
             <h1>Remove Staff</h1>
             <p>Type the Email of the staff you want to delete</p>
         </header>
 
-        
+        <!-- Navigation -->
         <nav class="auto-style1">
-            <a href="AdminHomePage.aspx">Home</a>
-            <a href="AdminStaff.aspx">Dashboard</a>
-            <a href="AdminAddStaff.aspx">Add Staff</a>
-            <a href="AdminUpdateStaff.aspx">Update Staff</a>
+            <a href="AdminMainScreen.aspx">Home</a>
+            <a href="AdminStaffManagement.aspx">Staff Management</a>
         </nav>
 
-        
+        <!-- Main Content -->
         <div class="content">
             <asp:Label ID="lblMessage" runat="server" CssClass="message"></asp:Label>
             <br /><br />
@@ -50,7 +47,7 @@
             <asp:Button ID="btnDeleteByEmail" runat="server" Text="Delete Staff" CssClass="btn" OnClick="btnDeleteByEmail_Click" />
             <br /><br />
 
-            
+            <!-- Display Staff Table -->
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="true"></asp:GridView>
         </div>
     </form>
