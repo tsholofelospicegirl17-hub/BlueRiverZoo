@@ -1,4 +1,4 @@
-﻿using QRCoder;
+using QRCoder;
 using System;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -29,13 +29,11 @@ namespace BlueRiverZoo
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
-                        lblDetails.Text = $"<b>Ticket ID:</b> {dr["ReservationID"]}<br/>" +
-                                          $"<b>Type:</b> {dr["TicketType"]}<br/>" +
-                                          $"<b>Date:</b> {Convert.ToDateTime(dr["VisitDate"]).ToString("yyyy-MM-dd")}<br/>" +
+                        lblDetails.Text = $"<b>Ticket ID:</b> {dr["ReservationID"]}<br/>" + $"<b>Type:</b> {dr["TicketType"]}<br/>" + $"<b>Date:</b> {Convert.ToDateTime(dr["VisitDate"]).ToString("yyyy-MM-dd")}<br/>" +
                                           $"<b>Tickets:</b> {dr["NumTickets"]}<br/>" +
                                           $"<b>Total:</b> R{dr["TotalCost"]}";
 
-                        // Generate QR Code for ticket
+                        //Generates a QR Code for the ticket
                         string qrText = $"Blue River Zoo - Reservation #{dr["ReservationID"]}";
                         QRCodeGenerator qrGen = new QRCodeGenerator();
                         QRCodeData qrData = qrGen.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
